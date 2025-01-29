@@ -43,7 +43,7 @@ namespace dark
             this.buttonConfirmItem = new Sipaa.Framework.SButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboboxRarity = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -181,7 +181,7 @@ namespace dark
             this.panelItemChoose.BorderRadius = 6;
             this.panelItemChoose.BorderSize = 2;
             this.panelItemChoose.Controls.Add(this.label2);
-            this.panelItemChoose.Controls.Add(this.comboBox1);
+            this.panelItemChoose.Controls.Add(this.comboboxRarity);
             this.panelItemChoose.Controls.Add(this.buttonConfirmItem);
             this.panelItemChoose.Controls.Add(this.label1);
             this.panelItemChoose.Controls.Add(this.comboboxItems);
@@ -235,50 +235,33 @@ namespace dark
             this.buttonAddItem.UseVisualStyleBackColor = false;
             this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
             // 
-            // comboBox1
+            // comboboxRarity
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "CrusaderHelm",
-            "ShadowMask",
-            "KettleHat",
-            "ChampionArmor",
-            "Frock",
-            "MysticVestments",
-            "BardicPants",
-            "HeavyLeatherLeggings",
-            "PlatePants",
-            "ArcaneGloves",
-            "ElkwoodGloves",
-            "LightGauntlets",
-            "AdventurerBoots",
-            "LightfootBoots",
-            "HeavyBoots",
-            "AdventurerCloak",
-            "MercurialCloak",
-            "RadiantCloak",
-            "BearPendant",
-            "FoxPendant",
-            "OwlPendant",
-            "RingOfWisdom",
-            "RingOfVitality",
-            "RingOfFinesse"});
-            this.comboBox1.Location = new System.Drawing.Point(19, 109);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 28);
-            this.comboBox1.TabIndex = 12;
+            this.comboboxRarity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboboxRarity.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.comboboxRarity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboboxRarity.FormattingEnabled = true;
+            this.comboboxRarity.Items.AddRange(new object[] {
+            "Poor",
+            "Common",
+            "Uncommon",
+            "Rare",
+            "Epic",
+            "Legendary",
+            "Unique"});
+            this.comboboxRarity.Location = new System.Drawing.Point(19, 109);
+            this.comboboxRarity.Name = "comboboxRarity";
+            this.comboboxRarity.Size = new System.Drawing.Size(149, 28);
+            this.comboboxRarity.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Choose item...";
+            this.label2.Text = "Choose rarity...";
             // 
             // Form1
             // 
@@ -333,7 +316,7 @@ namespace dark
         private Sipaa.Framework.SButton buttonAddItem;
         private Sipaa.Framework.SButton buttonConfirmItem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboboxRarity;
     }
 }
 
