@@ -17,9 +17,13 @@ namespace dark
         public Form1()
         {
             InitializeComponent();
-            
+            Character main = new Character();
+
+            Item<Chests> frock = new Item<Chests>(Chests.Frock);
+
+            main.AddItem<Helmets>(Helmets.ShadowMask);
+
+            main.AddItem(frock);
         }
     }
-
-    
 }

@@ -20,11 +20,61 @@ namespace database
             {"movespeed", 0 },
             {"Ppowerbonus",0 }
         };
+        public List<object> Items = new List<object>();
+        
+        public void AddItem<ItemType>(ItemType item)
+        {
+            Items.Add(new Item<ItemType>(item));
+        }
 
+        public void AddItem(object item)
+        {
+            Items.Add(item);
+        }     
     }
 
-    public class Item
+    #region ItemTypes
+    public enum Helmets
     {
-        string name;
+        CrusaderHelm, ShadowMask, KettleHat
+    }
+
+    public enum Chests
+    {
+        ChampionArmor, Frock, MysticVestments
+    }
+    public enum Legs
+    {
+        BardicPants, HeavyLeatherLeggings, PlatePants
+    }
+    public enum Hands
+    {
+        ArcaneGloves, ElkwoodGloves, LightGauntlets
+    }
+    public enum Foots
+    {
+        AdventurerBoots, LightfootBoots, HeavyBoots
+    }
+    public enum Backs
+    {
+        AdventurerCloak, MercurialCloak, RadiantCloak
+    }
+    public enum Necklaces
+    {
+        BearPendant, FoxPendant, OwlPendant
+    }
+    public enum Rings
+    {
+        RingOfWisdom, RingOfVitality, RingOfFinesse
+    }
+    #endregion
+
+    public class Item<TItem>
+    {
+        public TItem name;
+        public Item(TItem itemName)
+        {
+            name = itemName;
+        }
     }
 }
