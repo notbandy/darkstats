@@ -109,21 +109,24 @@ namespace database
         {
             set
             {
-                switch (this.name)
+                switch(value) //Rarity check
                 {
-                    case Helmets h:
+                    case Rarity.Poor:
+                        switch (this.name) //item typecheck
+                        {
+                            case Helmets h: //if helmets
 
-                    switch (h)
-                    {
-                         case Helmets.CrusaderHelm:
-                              Stats["strength"] = 1;
-                              Stats["vigor"] = 2;
-                              break;
-                    }
-                    break;
+                                switch (h)
+                                {
+                                    case Helmets.CrusaderHelm: //fucking curzader 
+                                        Stats["strength"] = 1;
+                                        Stats["vigor"] = 2;
+                                        break;
+                                }
+                                break;
                         }
                         break;
-                
+                }
             }
         }
     }

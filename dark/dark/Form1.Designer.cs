@@ -40,9 +40,11 @@ namespace dark
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.comboboxItems = new System.Windows.Forms.ComboBox();
             this.panelItemChoose = new Sipaa.Framework.SPanel();
+            this.buttonConfirmItem = new Sipaa.Framework.SButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
-            this.buttonConfirmItem = new Sipaa.Framework.SButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -167,7 +169,7 @@ namespace dark
             "RingOfWisdom",
             "RingOfVitality",
             "RingOfFinesse"});
-            this.comboboxItems.Location = new System.Drawing.Point(20, 43);
+            this.comboboxItems.Location = new System.Drawing.Point(19, 43);
             this.comboboxItems.Name = "comboboxItems";
             this.comboboxItems.Size = new System.Drawing.Size(149, 28);
             this.comboboxItems.TabIndex = 9;
@@ -178,15 +180,34 @@ namespace dark
             this.panelItemChoose.BorderColor = System.Drawing.Color.SaddleBrown;
             this.panelItemChoose.BorderRadius = 6;
             this.panelItemChoose.BorderSize = 2;
+            this.panelItemChoose.Controls.Add(this.label2);
+            this.panelItemChoose.Controls.Add(this.comboBox1);
             this.panelItemChoose.Controls.Add(this.buttonConfirmItem);
             this.panelItemChoose.Controls.Add(this.label1);
             this.panelItemChoose.Controls.Add(this.comboboxItems);
             this.panelItemChoose.ForeColor = System.Drawing.Color.White;
             this.panelItemChoose.Location = new System.Drawing.Point(726, 217);
             this.panelItemChoose.Name = "panelItemChoose";
-            this.panelItemChoose.Size = new System.Drawing.Size(187, 135);
+            this.panelItemChoose.Size = new System.Drawing.Size(187, 202);
             this.panelItemChoose.TabIndex = 10;
             this.panelItemChoose.Visible = false;
+            // 
+            // buttonConfirmItem
+            // 
+            this.buttonConfirmItem.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonConfirmItem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonConfirmItem.BorderRadius = 6;
+            this.buttonConfirmItem.BorderSize = 0;
+            this.buttonConfirmItem.FlatAppearance.BorderSize = 0;
+            this.buttonConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmItem.ForeColor = System.Drawing.Color.White;
+            this.buttonConfirmItem.Location = new System.Drawing.Point(19, 149);
+            this.buttonConfirmItem.Name = "buttonConfirmItem";
+            this.buttonConfirmItem.Size = new System.Drawing.Size(150, 40);
+            this.buttonConfirmItem.TabIndex = 11;
+            this.buttonConfirmItem.Text = "Add";
+            this.buttonConfirmItem.UseVisualStyleBackColor = false;
+            this.buttonConfirmItem.Click += new System.EventHandler(this.sButton2_Click);
             // 
             // label1
             // 
@@ -214,22 +235,50 @@ namespace dark
             this.buttonAddItem.UseVisualStyleBackColor = false;
             this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
             // 
-            // buttonConfirmItem
+            // comboBox1
             // 
-            this.buttonConfirmItem.BackColor = System.Drawing.Color.SaddleBrown;
-            this.buttonConfirmItem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.buttonConfirmItem.BorderRadius = 6;
-            this.buttonConfirmItem.BorderSize = 0;
-            this.buttonConfirmItem.FlatAppearance.BorderSize = 0;
-            this.buttonConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirmItem.ForeColor = System.Drawing.Color.White;
-            this.buttonConfirmItem.Location = new System.Drawing.Point(19, 81);
-            this.buttonConfirmItem.Name = "buttonConfirmItem";
-            this.buttonConfirmItem.Size = new System.Drawing.Size(150, 40);
-            this.buttonConfirmItem.TabIndex = 11;
-            this.buttonConfirmItem.Text = "Add";
-            this.buttonConfirmItem.UseVisualStyleBackColor = false;
-            this.buttonConfirmItem.Click += new System.EventHandler(this.sButton2_Click);
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "CrusaderHelm",
+            "ShadowMask",
+            "KettleHat",
+            "ChampionArmor",
+            "Frock",
+            "MysticVestments",
+            "BardicPants",
+            "HeavyLeatherLeggings",
+            "PlatePants",
+            "ArcaneGloves",
+            "ElkwoodGloves",
+            "LightGauntlets",
+            "AdventurerBoots",
+            "LightfootBoots",
+            "HeavyBoots",
+            "AdventurerCloak",
+            "MercurialCloak",
+            "RadiantCloak",
+            "BearPendant",
+            "FoxPendant",
+            "OwlPendant",
+            "RingOfWisdom",
+            "RingOfVitality",
+            "RingOfFinesse"});
+            this.comboBox1.Location = new System.Drawing.Point(19, 109);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(149, 28);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Choose item...";
             // 
             // Form1
             // 
@@ -283,6 +332,8 @@ namespace dark
         private System.Windows.Forms.Label label1;
         private Sipaa.Framework.SButton buttonAddItem;
         private Sipaa.Framework.SButton buttonConfirmItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
