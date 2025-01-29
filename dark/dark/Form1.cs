@@ -84,8 +84,17 @@ namespace dark
                 clicks++;
                 return;
             }
-            message("nigga", "nigga", msgbox.Icons.Error);
-            //
+            Thread th = new Thread(() =>
+            {
+                Invoke((Action)(() =>
+                {
+                    message("nigga", "nigga", msgbox.Icons.Error);
+                }));
+                Thread.Sleep(2000);
+                fish f = new fish();
+                f.Show();
+            });
+            th.Start();
         }
     }
 }

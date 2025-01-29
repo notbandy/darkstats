@@ -24,3 +24,4 @@ E:\#csharp\darktracker\dark\dark\obj\Debug\dark.exe
 E:\#csharp\darktracker\dark\dark\obj\Debug\dark.pdb
 E:\#csharp\darktracker\dark\dark\bin\Debug\Transitions.dll
 E:\#csharp\darktracker\dark\dark\bin\Debug\Transitions.pdb
+E:\#csharp\darktracker\dark\dark\obj\Debug\dark.fish.resources
