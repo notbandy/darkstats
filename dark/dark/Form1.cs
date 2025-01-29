@@ -17,8 +17,7 @@ namespace dark
         {
             InitializeComponent();
             //hey
-            // hello chat
-            //nigga
+            // hello chat           
         }
     }
 }
