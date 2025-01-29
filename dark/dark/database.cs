@@ -40,6 +40,7 @@ namespace database
         {
             Items[itemType] = item;
         }
+
     }
 
     #region ItemTypes
@@ -78,12 +79,52 @@ namespace database
     }
     #endregion
 
+    public enum Rarity
+    {
+        Poor,Common,Uncommon,Rare,Epic,Legendary,Unique
+    }
+
     public class Item<TItem> //creates an item with its type 'helmet, chest...'
     {
         public TItem name; //this is the item name, for example Helmets.CrusaderHelm
         public Item(TItem itemName) //takes in ItemType.ItemName for eg. Helmets.CrusaderHelm
         {
             name = itemName; //boilerplate
+        }
+
+        public Dictionary<string, short> Stats = new Dictionary<string, short>()
+        {
+            {"strength", 0 },
+            {"vigor", 0 },
+            {"agility", 0 },
+            {"dexterity", 0 },
+            {"will", 0 },
+            {"knowledge", 0 },
+            {"resourcefulness", 0 },
+            {"movespeed", 0 },
+            {"Ppowerbonus",0 }
+        };
+
+        public Rarity rarity
+        {
+            set
+            {
+                switch (this.name)
+                {
+                    case Helmets h:
+
+                    switch (h)
+                    {
+                         case Helmets.CrusaderHelm:
+                              Stats["strength"] = 1;
+                              Stats["vigor"] = 2;
+                              break;
+                    }
+                    break;
+                        }
+                        break;
+                
+            }
         }
     }
 }
