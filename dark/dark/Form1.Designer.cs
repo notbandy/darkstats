@@ -40,11 +40,11 @@ namespace dark
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.comboboxItems = new System.Windows.Forms.ComboBox();
             this.panelItemChoose = new Sipaa.Framework.SPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboboxRarity = new System.Windows.Forms.ComboBox();
             this.buttonConfirmItem = new Sipaa.Framework.SButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
-            this.comboboxRarity = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -143,6 +143,7 @@ namespace dark
             this.comboboxItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
             this.comboboxItems.Cursor = System.Windows.Forms.Cursors.Cross;
             this.comboboxItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboboxItems.ForeColor = System.Drawing.Color.White;
             this.comboboxItems.FormattingEnabled = true;
             this.comboboxItems.Items.AddRange(new object[] {
             "CrusaderHelm",
@@ -192,6 +193,35 @@ namespace dark
             this.panelItemChoose.TabIndex = 10;
             this.panelItemChoose.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Choose rarity...";
+            // 
+            // comboboxRarity
+            // 
+            this.comboboxRarity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboboxRarity.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.comboboxRarity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboboxRarity.ForeColor = System.Drawing.Color.White;
+            this.comboboxRarity.FormattingEnabled = true;
+            this.comboboxRarity.Items.AddRange(new object[] {
+            "Poor",
+            "Common",
+            "Uncommon",
+            "Rare",
+            "Epic",
+            "Legendary",
+            "Unique"});
+            this.comboboxRarity.Location = new System.Drawing.Point(19, 109);
+            this.comboboxRarity.Name = "comboboxRarity";
+            this.comboboxRarity.Size = new System.Drawing.Size(149, 28);
+            this.comboboxRarity.TabIndex = 12;
+            // 
             // buttonConfirmItem
             // 
             this.buttonConfirmItem.BackColor = System.Drawing.Color.SaddleBrown;
@@ -234,34 +264,6 @@ namespace dark
             this.buttonAddItem.Text = "Add Item";
             this.buttonAddItem.UseVisualStyleBackColor = false;
             this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
-            // 
-            // comboboxRarity
-            // 
-            this.comboboxRarity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
-            this.comboboxRarity.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.comboboxRarity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboboxRarity.FormattingEnabled = true;
-            this.comboboxRarity.Items.AddRange(new object[] {
-            "Poor",
-            "Common",
-            "Uncommon",
-            "Rare",
-            "Epic",
-            "Legendary",
-            "Unique"});
-            this.comboboxRarity.Location = new System.Drawing.Point(19, 109);
-            this.comboboxRarity.Name = "comboboxRarity";
-            this.comboboxRarity.Size = new System.Drawing.Size(149, 28);
-            this.comboboxRarity.TabIndex = 12;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Choose rarity...";
             // 
             // Form1
             // 
