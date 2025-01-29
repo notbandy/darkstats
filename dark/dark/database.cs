@@ -109,7 +109,7 @@ namespace database
         {
             set
             {
-                //SOMEONE PLEASE FINISH THIS SHIT
+                //SOMEONE PLEASE FINISH THIS SHIT // ahh hell nawww
                 switch(value) //Rarity check
                 {
                     case Rarity.Poor:
