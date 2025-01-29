@@ -119,9 +119,8 @@ namespace database
 
                                 switch (h)
                                 {
-                                    case Helmets.CrusaderHelm: //fucking curzader
-                                        Stats["strength"] = 1;
-                                        Stats["vigor"] = 2;
+                                    case Helmets.CrusaderHelm: 
+                                        //API Somewhere here i thunk
                                         break;
                                 }
                                 break;
