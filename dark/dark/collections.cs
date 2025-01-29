@@ -11,7 +11,7 @@ namespace bandysharp.Collections
     {
         public TMain main;
         public TSub sub;
-        
+
         public static implicit operator TMain(LigmaPair<TMain, TSub> pair)
         {
             return pair.main;
@@ -25,6 +25,7 @@ namespace bandysharp.Collections
             main = m;
             sub = s;
         }
+    
     }
     public class LigmaMap<TMain, TSub>
     {
@@ -43,7 +44,7 @@ namespace bandysharp.Collections
         public void Add(LigmaPair<TMain, TSub> pair) => pairs.Add(pair);
 
         public void Add(TMain main, TSub sub) => pairs.Add(new LigmaPair<TMain, TSub>(main, sub));
-
+        //yes
         public void Add(TMain main) => pairs.Add(new LigmaPair<TMain, TSub>(main, default(TSub)));
 
         public void Swap(int index1, int index2)
