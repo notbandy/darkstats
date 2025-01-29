@@ -78,12 +78,12 @@ namespace database
     }
     #endregion
 
-    public class Item<TItem>
+    public class Item<TItem> //creates an item with its type 'helmet, chest...'
     {
-        public TItem name;
-        public Item(TItem itemName)
+        public TItem name; //this is the item name, for example Helmets.CrusaderHelm
+        public Item(TItem itemName) //takes in ItemType.ItemName for eg. Helmets.CrusaderHelm
         {
-            name = itemName;
+            name = itemName; //boilerplate
         }
     }
 }
