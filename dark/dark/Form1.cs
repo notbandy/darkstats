@@ -76,5 +76,15 @@ namespace dark
                 //TODO finish this fucking statement
             }
         }
+        int clicks = 0;
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if(clicks != 5)
+            {
+                clicks++;
+                return;
+            }
+            message("nigga", "nigga", msgbox.Icons.Error);
+        }
     }
 }
