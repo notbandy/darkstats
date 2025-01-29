@@ -1,0 +1,11 @@
+S:\git\darkstats\dark\dark\obj\Debug\dark.csproj.AssemblyReference.cache
+S:\git\darkstats\dark\dark\obj\Debug\dark.Form1.resources
+S:\git\darkstats\dark\dark\obj\Debug\dark.Properties.Resources.resources
+S:\git\darkstats\dark\dark\obj\Debug\dark.csproj.GenerateResource.cache
+S:\git\darkstats\dark\dark\obj\Debug\dark.csproj.CoreCompileInputs.cache
+S:\git\darkstats\dark\dark\bin\Debug\dark.exe.config
+S:\git\darkstats\dark\dark\bin\Debug\dark.exe
+S:\git\darkstats\dark\dark\bin\Debug\dark.pdb
+S:\git\darkstats\dark\dark\bin\Debug\SipaaFramework.dll
+S:\git\darkstats\dark\dark\obj\Debug\dark.exe
+S:\git\darkstats\dark\dark\obj\Debug\dark.pdb

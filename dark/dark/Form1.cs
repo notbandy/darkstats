@@ -25,5 +25,15 @@ namespace dark
 
             main.AddItem(frock);
         }
+
+        private void sButton1_Click(object sender, EventArgs e)
+        {
+            panelItemChoose.Show();
+        }
+
+        private void sButton2_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
