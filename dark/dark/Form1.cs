@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using database;
 using bandysharp.Collections;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,8 +17,9 @@ namespace dark
         public Form1()
         {
             InitializeComponent();
-            //hey
-            // hello chat           
+            
         }
     }
+
+    
 }
