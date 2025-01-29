@@ -51,7 +51,7 @@ namespace dark
         }
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
-            fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 30);
+            fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 1);
             panelItemChoose.Show();
         }
 
