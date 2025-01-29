@@ -109,6 +109,7 @@ namespace database
         {
             set
             {
+                //SOMEONE PLEASE FINISH THIS SHIT
                 switch(value) //Rarity check
                 {
                     case Rarity.Poor:
@@ -118,7 +119,7 @@ namespace database
 
                                 switch (h)
                                 {
-                                    case Helmets.CrusaderHelm: //fucking curzader 
+                                    case Helmets.CrusaderHelm: //fucking curzader
                                         Stats["strength"] = 1;
                                         Stats["vigor"] = 2;
                                         break;
