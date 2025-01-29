@@ -38,6 +38,7 @@ namespace dark
                 case 1:
                     Char.EditItem("Helmet", new Item<Helmets>(Helmets.ShadowMask));
                     break;
+                //TODO finish this fucking statement
             }
         }
     }
