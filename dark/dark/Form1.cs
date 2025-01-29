@@ -44,10 +44,15 @@ namespace dark
             });
             th.Start(); //no way i missed this line... //retard
         }
+        int fib(LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>> a, int n)
+        {
+            if (n <= 1) return n;
+            return fib(a, n - 1) + fib(a, n - 2);
+        }
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
+            fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 30);
             panelItemChoose.Show();
-            
         }
 
         private void sButton2_Click(object sender, EventArgs e)
