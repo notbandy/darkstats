@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using bandysharp.Collections;
 using System.Threading.Tasks;
 
 namespace database
 {
+    
     public class Character
     {
         public Dictionary<string, short> Stats = new Dictionary<string, short>()
@@ -20,17 +22,24 @@ namespace database
             {"movespeed", 0 },
             {"Ppowerbonus",0 }
         };
-        public List<object> Items = new List<object>();
-        
-        public void AddItem<ItemType>(ItemType item)
-        {
-            Items.Add(new Item<ItemType>(item));
-        }
 
-        public void AddItem(object item)
+        public Dictionary<string, object> Items = new Dictionary<string, object>()
         {
-            Items.Add(item);
-        }     
+            {"Helmet", null },
+            {"Chest", null },
+            {"Leg", null },
+            {"Hand", null },
+            {"Foot", null },
+            {"Back", null },
+            {"Necklace", null },
+            {"Ring", null },
+            {"Ring2", null }
+        };
+
+        public void EditItem(string itemType, object item)
+        {
+            Items[itemType] = item;
+        }
     }
 
     #region ItemTypes

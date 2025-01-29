@@ -14,10 +14,11 @@ namespace dark
 {
     public partial class Form1 : Form
     {
+        Character Char = new Character();
         public Form1()
         {
             InitializeComponent();
-            Character main = new Character();
+            
 
             Item<Chests> frock = new Item<Chests>(Chests.Frock);
 
@@ -33,7 +34,17 @@ namespace dark
 
         private void sButton2_Click(object sender, EventArgs e)
         {
-           
+            if (comboboxItems.SelectedItem == null)
+                return;
+            switch(comboboxItems.SelectedIndex)
+            {
+                case 0:
+                    Char.EditItem("Helmet", Helmets.CrusaderHelm);
+                    break;
+                case 1:
+                    Char.EditItem("Helmet", Helmets.ShadowMask);
+                    break;
+            }
         }
     }
 }

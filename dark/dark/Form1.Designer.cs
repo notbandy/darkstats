@@ -38,11 +38,11 @@ namespace dark
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboboxItems = new System.Windows.Forms.ComboBox();
             this.panelItemChoose = new Sipaa.Framework.SPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.sButton1 = new Sipaa.Framework.SButton();
-            this.sButton2 = new Sipaa.Framework.SButton();
+            this.buttonAddItem = new Sipaa.Framework.SButton();
+            this.buttonConfirmItem = new Sipaa.Framework.SButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -130,22 +130,47 @@ namespace dark
             // pictureBox9
             // 
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox9.Location = new System.Drawing.Point(609, 175);
+            this.pictureBox9.Location = new System.Drawing.Point(610, 175);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(32, 32);
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
             // 
-            // comboBox1
+            // comboboxItems
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(20, 43);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(149, 28);
-            this.comboBox1.TabIndex = 9;
+            this.comboboxItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboboxItems.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.comboboxItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboboxItems.FormattingEnabled = true;
+            this.comboboxItems.Items.AddRange(new object[] {
+            "CrusaderHelm",
+            "ShadowMask",
+            "KettleHat",
+            "ChampionArmor",
+            "Frock",
+            "MysticVestments",
+            "BardicPants",
+            "HeavyLeatherLeggings",
+            "PlatePants",
+            "ArcaneGloves",
+            "ElkwoodGloves",
+            "LightGauntlets",
+            "AdventurerBoots",
+            "LightfootBoots",
+            "HeavyBoots",
+            "AdventurerCloak",
+            "MercurialCloak",
+            "RadiantCloak",
+            "BearPendant",
+            "FoxPendant",
+            "OwlPendant",
+            "RingOfWisdom",
+            "RingOfVitality",
+            "RingOfFinesse"});
+            this.comboboxItems.Location = new System.Drawing.Point(20, 43);
+            this.comboboxItems.Name = "comboboxItems";
+            this.comboboxItems.Size = new System.Drawing.Size(149, 28);
+            this.comboboxItems.TabIndex = 9;
             // 
             // panelItemChoose
             // 
@@ -153,9 +178,9 @@ namespace dark
             this.panelItemChoose.BorderColor = System.Drawing.Color.SaddleBrown;
             this.panelItemChoose.BorderRadius = 6;
             this.panelItemChoose.BorderSize = 2;
-            this.panelItemChoose.Controls.Add(this.sButton2);
+            this.panelItemChoose.Controls.Add(this.buttonConfirmItem);
             this.panelItemChoose.Controls.Add(this.label1);
-            this.panelItemChoose.Controls.Add(this.comboBox1);
+            this.panelItemChoose.Controls.Add(this.comboboxItems);
             this.panelItemChoose.ForeColor = System.Drawing.Color.White;
             this.panelItemChoose.Location = new System.Drawing.Point(726, 217);
             this.panelItemChoose.Name = "panelItemChoose";
@@ -172,46 +197,46 @@ namespace dark
             this.label1.TabIndex = 10;
             this.label1.Text = "Choose item...";
             // 
-            // sButton1
+            // buttonAddItem
             // 
-            this.sButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
-            this.sButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sButton1.BorderRadius = 6;
-            this.sButton1.BorderSize = 0;
-            this.sButton1.FlatAppearance.BorderSize = 0;
-            this.sButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sButton1.ForeColor = System.Drawing.Color.White;
-            this.sButton1.Location = new System.Drawing.Point(398, 541);
-            this.sButton1.Name = "sButton1";
-            this.sButton1.Size = new System.Drawing.Size(291, 39);
-            this.sButton1.TabIndex = 11;
-            this.sButton1.Text = "Add Item";
-            this.sButton1.UseVisualStyleBackColor = false;
-            this.sButton1.Click += new System.EventHandler(this.sButton1_Click);
+            this.buttonAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
+            this.buttonAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonAddItem.BorderRadius = 6;
+            this.buttonAddItem.BorderSize = 0;
+            this.buttonAddItem.FlatAppearance.BorderSize = 0;
+            this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAddItem.ForeColor = System.Drawing.Color.White;
+            this.buttonAddItem.Location = new System.Drawing.Point(398, 541);
+            this.buttonAddItem.Name = "buttonAddItem";
+            this.buttonAddItem.Size = new System.Drawing.Size(291, 39);
+            this.buttonAddItem.TabIndex = 11;
+            this.buttonAddItem.Text = "Add Item";
+            this.buttonAddItem.UseVisualStyleBackColor = false;
+            this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
             // 
-            // sButton2
+            // buttonConfirmItem
             // 
-            this.sButton2.BackColor = System.Drawing.Color.SaddleBrown;
-            this.sButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sButton2.BorderRadius = 6;
-            this.sButton2.BorderSize = 0;
-            this.sButton2.FlatAppearance.BorderSize = 0;
-            this.sButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sButton2.ForeColor = System.Drawing.Color.White;
-            this.sButton2.Location = new System.Drawing.Point(19, 81);
-            this.sButton2.Name = "sButton2";
-            this.sButton2.Size = new System.Drawing.Size(150, 40);
-            this.sButton2.TabIndex = 11;
-            this.sButton2.Text = "Add";
-            this.sButton2.UseVisualStyleBackColor = false;
-            this.sButton2.Click += new System.EventHandler(this.sButton2_Click);
+            this.buttonConfirmItem.BackColor = System.Drawing.Color.SaddleBrown;
+            this.buttonConfirmItem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonConfirmItem.BorderRadius = 6;
+            this.buttonConfirmItem.BorderSize = 0;
+            this.buttonConfirmItem.FlatAppearance.BorderSize = 0;
+            this.buttonConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmItem.ForeColor = System.Drawing.Color.White;
+            this.buttonConfirmItem.Location = new System.Drawing.Point(19, 81);
+            this.buttonConfirmItem.Name = "buttonConfirmItem";
+            this.buttonConfirmItem.Size = new System.Drawing.Size(150, 40);
+            this.buttonConfirmItem.TabIndex = 11;
+            this.buttonConfirmItem.Text = "Add";
+            this.buttonConfirmItem.UseVisualStyleBackColor = false;
+            this.buttonConfirmItem.Click += new System.EventHandler(this.sButton2_Click);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1094, 601);
-            this.Controls.Add(this.sButton1);
+            this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.panelItemChoose);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -253,11 +278,11 @@ namespace dark
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboboxItems;
         private Sipaa.Framework.SPanel panelItemChoose;
         private System.Windows.Forms.Label label1;
-        private Sipaa.Framework.SButton sButton1;
-        private Sipaa.Framework.SButton sButton2;
+        private Sipaa.Framework.SButton buttonAddItem;
+        private Sipaa.Framework.SButton buttonConfirmItem;
     }
 }
 
