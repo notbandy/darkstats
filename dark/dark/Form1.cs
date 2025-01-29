@@ -19,12 +19,6 @@ namespace dark
         {
             InitializeComponent();
             
-
-            Item<Chests> frock = new Item<Chests>(Chests.Frock);
-
-            main.AddItem<Helmets>(Helmets.ShadowMask);
-
-            main.AddItem(frock);
         }
 
         private void sButton1_Click(object sender, EventArgs e)
@@ -39,10 +33,10 @@ namespace dark
             switch(comboboxItems.SelectedIndex)
             {
                 case 0:
-                    Char.EditItem("Helmet", Helmets.CrusaderHelm);
+                    Char.EditItem("Helmet", new Item<Helmets>(Helmets.CrusaderHelm));
                     break;
                 case 1:
-                    Char.EditItem("Helmet", Helmets.ShadowMask);
+                    Char.EditItem("Helmet", new Item<Helmets>(Helmets.ShadowMask));
                     break;
             }
         }
