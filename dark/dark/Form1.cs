@@ -42,7 +42,7 @@ namespace dark
                     this.TopMost = false;
                 }));
             });
-            th.Start(); //no way i missed this line...
+            th.Start(); //no way i missed this line... //retard
         }
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
