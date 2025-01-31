@@ -49,10 +49,20 @@ namespace dark
             if (n <= 1) return n;
             return fib(a, n - 1) + fib(a, n - 2);
         }
+
+        void logItem(string item, string rarity, string type, ref PictureBox p)
+        {
+            Char.EditItem(type, new Item(item, rarity, type) { });
+            p.Image = Char.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_6001");
+            
+        }
+
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
-            fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 1);
+            //fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 1);
             panelItemChoose.Show();
+
+            
         }
 
         private void sButton2_Click(object sender, EventArgs e)
@@ -65,18 +75,52 @@ namespace dark
             {
                 message("error", "you didnt provide a rarity", msgbox.Icons.Error); return;
             }
-            switch (comboboxItems.SelectedIndex)
+            int i = comboboxItems.SelectedIndex;
+            if (i <= 2)
             {
-                case 0:
-                    Char.EditItem("Helmet", new Item<Helmets>(Helmets.CrusaderHelm) { });
-                    break;
-                case 1:
-                    Char.EditItem("Helmet", new Item<Helmets>(Helmets.ShadowMask));
-                    break;
-                //TODO finish this fucking statement
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Helmet", ref pbHelmet);
             }
+            else if(i <= 5)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Chest", ref pbChest);
+            }
+            else if(i <= 8)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Leg", ref pbLeg);
+            }
+            else if(i <= 11)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Hands", ref pbHands);
+            }
+            else if(i <= 14)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Foot", ref pbFoot);
+            }
+            else if(i <= 17)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Back", ref pbBack);
+            }
+            else if(i <= 20)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "Necklace", ref pbNecklace);
+            }
+            else if(i <= 23)
+            {
+                if(usering2)
+                {
+                    logItem(comboboxItems.Text, comboboxRarity.Text, "Ring", ref pbRing2);
+                    usering2 = false;
+                }
+                else
+                {
+                    logItem(comboboxItems.Text, comboboxRarity.Text, "Ring", ref pbRing1);
+                    usering2 = true;
+                }
+            }
+            
         }
         int clicks = 0;
+        bool usering2 = false;
         private void pictureBox4_Click(object sender, EventArgs e)
         {
             if(clicks != 5)
@@ -99,10 +143,10 @@ namespace dark
 
         private void sButton1_Click_1(object sender, EventArgs e)
         {
-            message("crusader response", Char.callapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
+            message("crusader response", Char.calljsonapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
             //if you check messagebox.cs i've made it so that longer texts make the box expand
             //useful if you ever need long popups
-            //message("test response", Char.callapi("https://api.darkerdb.com/v1/health-check"), msgbox.Icons.Info); //just an api req test
+            //message("test response", Char.calljsonapi("https://api.darkerdb.com/v1/health-check"), msgbox.Icons.Info); //just an api req test
             //this wont expand the msgbox
         }
     }

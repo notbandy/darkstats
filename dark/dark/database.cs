@@ -5,6 +5,9 @@ using System.Text;
 using bandysharp.Collections;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.IO;
+using System.Drawing;
+using dark;
 
 namespace database
 {
@@ -12,7 +15,7 @@ namespace database
     public class Character
     {
 
-        public string callapi(string url)
+        public string calljsonapi(string url)
         {
             using(var http = new HttpClient())
             {
@@ -21,6 +24,27 @@ namespace database
                 return json;
             }
             
+        }
+        public Image calliconapi(string url)
+        {
+            using (var http = new HttpClient())
+            {
+                try
+                {
+                    byte[] req = http.GetByteArrayAsync(url).Result;
+                    using (var icon = new MemoryStream(req)) //ive got genuinely no idea how hard ive cooked
+                    {
+                        return Image.FromStream(icon);
+                    }
+                }
+                catch
+                {
+                    Form1 temp = new Form1();
+                    temp.message("Error", "API request failed, or overloaded", msgbox.Icons.Error);
+                    return null;
+                }
+            }
+
         }
         public Dictionary<string, short> Stats = new Dictionary<string, short>()
         {
@@ -55,56 +79,19 @@ namespace database
 
     }
 
-    #region ItemTypes
-    public enum Helmets
+    public class Item //creates an item with its type 'helmet, chest...'
     {
-        CrusaderHelm, ShadowMask, KettleHat
-    }
-
-    public enum Chests
-    {
-        ChampionArmor, Frock, MysticVestments
-    }
-    public enum Legs
-    {
-        BardicPants, HeavyLeatherLeggings, PlatePants
-    }
-    public enum Hands
-    {
-        ArcaneGloves, ElkwoodGloves, LightGauntlets
-    }
-    public enum Foots
-    {
-        AdventurerBoots, LightfootBoots, HeavyBoots
-    }
-    public enum Backs
-    {
-        AdventurerCloak, MercurialCloak, RadiantCloak
-    }
-    public enum Necklaces
-    {
-        BearPendant, FoxPendant, OwlPendant
-    }
-    public enum Rings
-    {
-        RingOfWisdom, RingOfVitality, RingOfFinesse
-    }
-    #endregion 
-    //gonna remove asf
-
-    public enum Rarity
-    {
-        Poor,Common,Uncommon,Rare,Epic,Legendary,Unique
-    }
-
-    public class Item<TItem> //creates an item with its type 'helmet, chest...'
-    {
-        public TItem name; //this is the item name, for example Helmets.CrusaderHelm
-        public Item(TItem itemName) //takes in ItemType.ItemName for eg. Helmets.CrusaderHelm
+        public string name;
+        public string rarity;
+        public string type; //this is the item name, for example Helmets.CrusaderHelm
+        public Item(string itemName, string rarity, string type) //takes in ItemType.ItemName for eg. Helmets.CrusaderHelm
         {
-            name = itemName; //boilerplate
+            name = itemName;
+            this.rarity = rarity;
+            this.type = type;
         }
 
+        /*
         public Dictionary<string, short> Stats = new Dictionary<string, short>()
         {
             {"strength", 0 },
@@ -117,31 +104,8 @@ namespace database
             {"movespeed", 0 },
             {"Ppowerbonus",0 }
         };
-
-        public Rarity rarity
-        {
-            set
-            {
-                //SOMEONE PLEASE FINISH THIS SHIT // ahh hell nawww
-                switch(value) //Rarity check
-                {
-                    case Rarity.Poor:
-                        switch (this.name) //item typecheck
-                        {
-                            case Helmets h: //if helmets
-
-                                switch (h)
-                                {
-                                    case Helmets.CrusaderHelm: 
-                                        //API Somewhere here i thunk
-                                        //nah bro
-                                        break;
-                                }
-                                break;
-                        }
-                        break;
-                }
-            }
-        }
+        */
+        
+        
     }
 }
