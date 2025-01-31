@@ -90,22 +90,8 @@ namespace database
             this.rarity = rarity;
             this.type = type;
         }
-
-        /*
-        public Dictionary<string, short> Stats = new Dictionary<string, short>()
-        {
-            {"strength", 0 },
-            {"vigor", 0 },
-            {"agility", 0 },
-            {"dexterity", 0 },
-            {"will", 0 },
-            {"knowledge", 0 },
-            {"resourcefulness", 0 },
-            {"movespeed", 0 },
-            {"Ppowerbonus",0 }
-        };
-        */
         
+        //prolly wont need the dict, i'll json parse the stats into something dynamic
         
     }
 }
