@@ -4,12 +4,24 @@ using System.Linq;
 using System.Text;
 using bandysharp.Collections;
 using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace database
 {
     
     public class Character
     {
+
+        public string callapi(string url)
+        {
+            using(var http = new HttpClient())
+            {
+                HttpResponseMessage req = http.GetAsync(url).Result;
+                string json = req.Content.ReadAsStringAsync().Result;
+                return json;
+            }
+            
+        }
         public Dictionary<string, short> Stats = new Dictionary<string, short>()
         {
             {"strength", 0 },
@@ -77,7 +89,8 @@ namespace database
     {
         RingOfWisdom, RingOfVitality, RingOfFinesse
     }
-    #endregion
+    #endregion 
+    //gonna remove asf
 
     public enum Rarity
     {
@@ -121,6 +134,7 @@ namespace database
                                 {
                                     case Helmets.CrusaderHelm: 
                                         //API Somewhere here i thunk
+                                        //nah bro
                                         break;
                                 }
                                 break;

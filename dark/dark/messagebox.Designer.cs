@@ -32,13 +32,15 @@
             this.sButton1 = new Sipaa.Framework.SButton();
             this.caption = new System.Windows.Forms.Label();
             this.sButton2 = new Sipaa.Framework.SButton();
-            this.message = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sEllipse1 = new Sipaa.Framework.SEllipse();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sButton1
             // 
+            this.sButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.sButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.sButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.sButton1.BorderRadius = 15;
@@ -47,7 +49,7 @@
             this.sButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sButton1.ForeColor = System.Drawing.Color.White;
-            this.sButton1.Location = new System.Drawing.Point(407, 12);
+            this.sButton1.Location = new System.Drawing.Point(509, 12);
             this.sButton1.Name = "sButton1";
             this.sButton1.Size = new System.Drawing.Size(30, 30);
             this.sButton1.TabIndex = 0;
@@ -68,6 +70,7 @@
             // 
             // sButton2
             // 
+            this.sButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(130)))), ((int)(((byte)(10)))));
             this.sButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.sButton2.BorderRadius = 6;
@@ -75,25 +78,13 @@
             this.sButton2.FlatAppearance.BorderSize = 0;
             this.sButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sButton2.ForeColor = System.Drawing.Color.White;
-            this.sButton2.Location = new System.Drawing.Point(308, 209);
+            this.sButton2.Location = new System.Drawing.Point(410, 242);
             this.sButton2.Name = "sButton2";
             this.sButton2.Size = new System.Drawing.Size(123, 37);
             this.sButton2.TabIndex = 2;
             this.sButton2.Text = "OK";
             this.sButton2.UseVisualStyleBackColor = false;
             this.sButton2.Click += new System.EventHandler(this.sButton2_Click);
-            // 
-            // message
-            // 
-            this.message.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.message.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.message.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.message.ForeColor = System.Drawing.Color.White;
-            this.message.Location = new System.Drawing.Point(15, 52);
-            this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(416, 143);
-            this.message.TabIndex = 3;
-            this.message.Text = "label1";
             // 
             // pictureBox1
             // 
@@ -105,14 +96,35 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.textBox1.Location = new System.Drawing.Point(15, 48);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(518, 188);
+            this.textBox1.TabIndex = 5;
+            // 
+            // sEllipse1
+            // 
+            this.sEllipse1.CornerRadius = 6;
+            this.sEllipse1.TargetControl = this.textBox1;
+            // 
             // msgbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(449, 262);
+            this.ClientSize = new System.Drawing.Size(551, 295);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.message);
             this.Controls.Add(this.sButton2);
             this.Controls.Add(this.caption);
             this.Controls.Add(this.sButton1);
@@ -125,6 +137,7 @@
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,7 +146,8 @@
         private Sipaa.Framework.SButton sButton1;
         private System.Windows.Forms.Label caption;
         private Sipaa.Framework.SButton sButton2;
-        private System.Windows.Forms.Label message;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private Sipaa.Framework.SEllipse sEllipse1;
     }
 }

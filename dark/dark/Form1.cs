@@ -96,5 +96,14 @@ namespace dark
             });
             th.Start();
         }
+
+        private void sButton1_Click_1(object sender, EventArgs e)
+        {
+            message("crusader response", Char.callapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
+            //if you check messagebox.cs i've made it so that longer texts make the box expand
+            //useful if you ever need long popups
+            //message("test response", Char.callapi("https://api.darkerdb.com/v1/health-check"), msgbox.Icons.Info); //just an api req test
+            //this wont expand the msgbox
+        }
     }
 }

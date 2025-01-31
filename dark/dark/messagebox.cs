@@ -37,14 +37,24 @@ namespace dark
             InitializeComponent();
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             caption.Text = title;
-            message.Text = text;
+            textBox1.Text = text;
             fein = f; //severe boilerplate
             if(icon == Icons.Error)
             {
                 pictureBox1.Image = Properties.Resources.whiteerror;
                 this.Icon = Properties.Resources.error;
             }
-
+            int count = textBox1.GetLineFromCharIndex(int.MaxValue) + 1;
+            if (textBox1.Lines.Length == 0)
+                --count;
+            foreach (string line in textBox1.Lines) //hate it but had to make it so that the
+                if (line == "") //messagebox expands when there is too much text
+                    --count;
+            for (int i = 0; i < count - 10; i++)
+            {
+                this.Size = new Size(this.Size.Width, this.Size.Height + 10);
+                this.Region = new Region(new Rectangle(this.Left, this.Top, this.Size.Width, this.Size.Height));
+            }
             Show();
             this.Top = 0;
             

@@ -29,8 +29,8 @@ namespace dark
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbHelmet = new System.Windows.Forms.PictureBox();
+            this.pbChest = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -45,8 +45,9 @@ namespace dark
             this.buttonConfirmItem = new Sipaa.Framework.SButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.sButton1 = new Sipaa.Framework.SButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -57,23 +58,23 @@ namespace dark
             this.panelItemChoose.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbHelmet
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(497, 101);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 88);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbHelmet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbHelmet.Location = new System.Drawing.Point(498, 101);
+            this.pbHelmet.Name = "pbHelmet";
+            this.pbHelmet.Size = new System.Drawing.Size(88, 88);
+            this.pbHelmet.TabIndex = 0;
+            this.pbHelmet.TabStop = false;
             // 
-            // pictureBox2
+            // pbChest
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(497, 206);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(88, 168);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.pbChest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbChest.Location = new System.Drawing.Point(498, 205);
+            this.pbChest.Name = "pbChest";
+            this.pbChest.Size = new System.Drawing.Size(88, 168);
+            this.pbChest.TabIndex = 1;
+            this.pbChest.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -266,11 +267,29 @@ namespace dark
             this.buttonAddItem.UseVisualStyleBackColor = false;
             this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
             // 
+            // sButton1
+            // 
+            this.sButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
+            this.sButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sButton1.BorderRadius = 6;
+            this.sButton1.BorderSize = 0;
+            this.sButton1.FlatAppearance.BorderSize = 0;
+            this.sButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sButton1.ForeColor = System.Drawing.Color.White;
+            this.sButton1.Location = new System.Drawing.Point(454, 12);
+            this.sButton1.Name = "sButton1";
+            this.sButton1.Size = new System.Drawing.Size(176, 40);
+            this.sButton1.TabIndex = 12;
+            this.sButton1.Text = "example api request";
+            this.sButton1.UseVisualStyleBackColor = false;
+            this.sButton1.Click += new System.EventHandler(this.sButton1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1094, 601);
+            this.Controls.Add(this.sButton1);
             this.Controls.Add(this.buttonAddItem);
             this.Controls.Add(this.panelItemChoose);
             this.Controls.Add(this.pictureBox9);
@@ -280,15 +299,15 @@ namespace dark
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbChest);
+            this.Controls.Add(this.pbHelmet);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MinimumSize = new System.Drawing.Size(1110, 640);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -304,8 +323,8 @@ namespace dark
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbHelmet;
+        private System.Windows.Forms.PictureBox pbChest;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -320,6 +339,7 @@ namespace dark
         private Sipaa.Framework.SButton buttonConfirmItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboboxRarity;
+        private Sipaa.Framework.SButton sButton1;
     }
 }
 
