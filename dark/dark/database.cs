@@ -31,8 +31,20 @@ namespace database
             {"will", 0 },
             {"knowledge", 0 },
             {"resourcefulness", 0 },
+            {"health", 0 },
+            {"memcap",0 },
             {"movespeed", 0 },
-            {"Ppowerbonus",0 }
+            {"actionspeed", 0 },
+            {"armorpen", 0 },
+            {"headshotred", 0 },
+            {"armorrating",0 },
+            {"pdr", 0 },
+            {"mr", 0 },
+            {"physpower",0 },
+            {"magicpower",0 },
+            {"Ppowerbonus", 0 },
+            {"Mpowerbonus",0 },
+
         };
 
         public Dictionary<string, Item> Items = new Dictionary<string, Item>()
@@ -137,76 +149,42 @@ namespace database
         public string description { get; set; }
         public string type { get; set; }
         public string armor_type { get; set; }
-        public string slot_type { get; set; }
-        public int max_stack_size { get; set; }
-        public int inventory_width { get; set; }
-        public int inventory_height { get; set; }
-        public float vendor_price { get; set; }
-        public float time_to_equip { get; set; }
-        public int gear_score { get; set; }
-        public int adventure_points { get; set; }
-        public float experience { get; set; }
-        public float num_primary_attributes { get; set; }
-        public float num_secondary_attributes { get; set; }
-        public float primary_min_armor_rating { get; set; }
-        public float primary_max_armor_rating { get; set; }
-        public float primary_min_move_speed { get; set; }
+        public string slot_type { get; set; }            
+
+        public float primary_max_armor_rating { get; set; }       
         public float primary_max_move_speed { get; set; }
         public float primary_max_armor_penetration { get; set; } 
         public float primary_max_true_physical_damage { get; set; }
         public float primary_max_weapon_damage { get; set; }
         public float primary_max_magic_weapon_damage { get; set; }
-        
-        public float secondary_min_agility { get; set; }
-        public float secondary_max_agility { get; set; }
-        public float secondary_min_additional_armor_rating { get; set; }
-        public float secondary_max_additional_armor_rating { get; set; }
-        public float secondary_min_buff_duration_bonus { get; set; }
-        public float secondary_max_buff_duration_bonus { get; set; }
-        public float secondary_min_debuff_duration_bonus { get; set; }
-        public float secondary_max_debuff_duration_bonus { get; set; }
-        public float secondary_min_dexterity { get; set; }
-        public float secondary_max_dexterity { get; set; }
-        public float secondary_min_knowledge { get; set; }
-        public float secondary_max_knowledge { get; set; }
-        public float secondary_min_luck { get; set; }
-        public float secondary_max_luck { get; set; }
-        public float secondary_min_magic_resistance { get; set; }
-        public float secondary_max_magic_resistance { get; set; }
-        public float secondary_min_magical_damage_bonus { get; set; }
-        public float secondary_max_magical_damage_bonus { get; set; }
-        public float secondary_min_magical_damage_reduction { get; set; }
-        public float secondary_max_magical_damage_reduction { get; set; }
-        public float secondary_min_magical_power { get; set; }
-        public float secondary_max_magical_power { get; set; }
-        public float secondary_min_max_health { get; set; }
-        public float secondary_max_max_health { get; set; }
-        public float secondary_min_max_health_bonus { get; set; }
-        public float secondary_max_max_health_bonus { get; set; }
-        public float secondary_min_additional_memory_capacity { get; set; }
-        public float secondary_max_additional_memory_capacity { get; set; }
-        public float secondary_min_memory_capacity_bonus { get; set; }
-        public float secondary_max_memory_capacity_bonus { get; set; }
-        public float secondary_min_additional_move_speed { get; set; }
-        public float secondary_max_additional_move_speed { get; set; }
-        public float secondary_min_move_speed_bonus { get; set; }
-        public float secondary_max_move_speed_bonus { get; set; }
-        public float secondary_min_physical_damage_bonus { get; set; }
-        public float secondary_max_physical_damage_bonus { get; set; }
-        public float secondary_min_physical_damage_reduction { get; set; }
-        public float secondary_max_physical_damage_reduction { get; set; }
-        public float secondary_min_physical_power { get; set; }
-        public float secondary_max_physical_power { get; set; }
-        public float secondary_min_projectile_damage_reduction { get; set; }
-        public float secondary_max_projectile_damage_reduction { get; set; }
-        public float secondary_min_resourcefulness { get; set; }
-        public float secondary_max_resourcefulness { get; set; }
-        public float secondary_min_strength { get; set; }
-        public float secondary_max_strength { get; set; }
-        public float secondary_min_vigor { get; set; }
-        public float secondary_max_vigor { get; set; }
-        public float secondary_min_will { get; set; }
-        public float secondary_max_will { get; set; }
+        public float primary_max_strength { get; set; }
+        public float primary_max_agility { get; set; }
+        public float primary_max_dexterity { get; set; }
+        public float primary_max_action_speed { get; set; }       
+        public float primary_max_additional_armor_rating { get; set; }
+        public float primary_max_buff_duration_bonus { get; set; }
+        public float primary_max_debuff_duration_bonus { get; set; }      
+        public float primary_max_knowledge { get; set; }
+        public float primary_max_magic_penetration { get; set; }
+        public float primary_max_magic_resistance { get; set; }
+        public float primary_max_magical_damage_bonus { get; set; }
+        public float primary_max_magical_damage_reduction { get; set; }
+        public float primary_max_magical_power { get; set; }
+        public float primary_max_max_health { get; set; }
+        public float primary_max_max_health_bonus { get; set; }
+        public float primary_max_additional_memory_capacity { get; set; }
+        public float primary_max_memory_capacity_bonus { get; set; }
+        public float primary_max_additional_physical_damage { get; set; }
+        public float primary_max_physical_damage_bonus { get; set; }
+        public float primary_max_physical_damage_reduction { get; set; }       
+        public float primary_max_physical_power { get; set; }
+        public float primary_max_projectile_damage_reduction { get; set; }
+        public float primary_max_resourcefulness { get; set; }
+        public float primary_max_spell_casting_speed { get; set; }      
+        public float primary_max_vigor { get; set; }
+        public float primary_max_will { get; set; }
+
+
         public string icon { get; set; }
     }
 
@@ -216,6 +194,7 @@ namespace database
         public string name;
         public string rarity;
         public string type; //this is the item name, for example Helmets.CrusaderHelm
+        public List<float> RealStats = new List<float>();
         public Item(string itemName, string rarity, string type) //takes in ItemType.ItemName for eg. Helmets.CrusaderHelm
         {
             name = itemName;
@@ -224,8 +203,154 @@ namespace database
             string spacedName = Regex.Replace(itemName, "([a-z])([A-Z])", "$1 $2");
             string url = "https://api.darkerdb.com/v1/search?id=" + itemName + "_" + Form1.raritycode[rarity];
             stats = ItemStats.pullStats(url);
+            #region retardation
+            if (stats.primary_max_action_speed!=0)
+            {
+                RealStats.Add(stats.primary_max_action_speed);
+            }
+
+            if (stats.primary_max_agility != 0)
+            {
+                RealStats.Add(stats.primary_max_agility);
+            }
+
+            if (stats.primary_max_armor_penetration != 0)
+            {
+                RealStats.Add(stats.primary_max_armor_penetration);
+            }
+
+            if (stats.primary_max_additional_armor_rating != 0)
+            {
+                RealStats.Add(stats.primary_max_additional_armor_rating);
+            }
+
+            if (stats.primary_max_buff_duration_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_buff_duration_bonus);
+            }
+
+            if (stats.primary_max_debuff_duration_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_debuff_duration_bonus);
+            }
+
+            if (stats.primary_max_dexterity != 0)
+            {
+                RealStats.Add(stats.primary_max_dexterity);
+            }
+
+            if (stats.primary_max_knowledge != 0)
+            {
+                RealStats.Add(stats.primary_max_knowledge);
+            }
+
+            if (stats.primary_max_magic_penetration != 0)
+            {
+                RealStats.Add(stats.primary_max_magic_penetration);
+            }
+
+            if (stats.primary_max_magic_resistance != 0)
+            {
+                RealStats.Add(stats.primary_max_magic_resistance);
+            }
+
+            if (stats.primary_max_magical_damage_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_magical_damage_bonus);
+            }
+
+            if (stats.primary_max_magical_damage_reduction != 0)
+            {
+                RealStats.Add(stats.primary_max_magical_damage_reduction);
+            }
+
+            if (stats.primary_max_magical_power != 0)
+            {
+                RealStats.Add(stats.primary_max_magical_power);
+            }
+
+            if (stats.primary_max_max_health != 0)
+            {
+                RealStats.Add(stats.primary_max_max_health);
+            }
+
+            if (stats.primary_max_max_health_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_max_health_bonus);
+            }
+
+            if (stats.primary_max_additional_memory_capacity != 0)
+            {
+                RealStats.Add(stats.primary_max_additional_memory_capacity);
+            }
+
+            if (stats.primary_max_memory_capacity_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_memory_capacity_bonus);
+            }
+
+            if (stats.primary_max_additional_physical_damage != 0)
+            {
+                RealStats.Add(stats.primary_max_additional_physical_damage);
+            }
+
+            if (stats.primary_max_physical_damage_bonus != 0)
+            {
+                RealStats.Add(stats.primary_max_physical_damage_bonus);
+            }
+
+            if (stats.primary_max_physical_damage_reduction != 0)
+            {
+                RealStats.Add(stats.primary_max_physical_damage_reduction);
+            }
+
+            if (stats.primary_max_true_physical_damage != 0)
+            {
+                RealStats.Add(stats.primary_max_true_physical_damage);
+            }
+
+            if (stats.primary_max_physical_power != 0)
+            {
+                RealStats.Add(stats.primary_max_physical_power);
+            }
+
+            if (stats.primary_max_projectile_damage_reduction != 0)
+            {
+                RealStats.Add(stats.primary_max_projectile_damage_reduction);
+            }
+
+            if (stats.primary_max_resourcefulness != 0)
+            {
+                RealStats.Add(stats.primary_max_resourcefulness);
+            }
+
+            if (stats.primary_max_spell_casting_speed != 0)
+            {
+                RealStats.Add(stats.primary_max_spell_casting_speed);
+            }
+
+            if (stats.primary_max_strength != 0)
+            {
+                RealStats.Add(stats.primary_max_strength);
+            }
+
+            if (stats.primary_max_vigor != 0)
+            {
+                RealStats.Add(stats.primary_max_vigor);
+            }
+
+            if (stats.primary_max_will != 0)
+            {
+                RealStats.Add(stats.primary_max_will);
+            }
+            if (stats.primary_max_armor_rating!=0)
+            {
+                RealStats.Add(stats.primary_max_armor_rating);
+            }
+            #endregion
         }
         public ItemStats stats { get; set; }
+      
         
 
     }

@@ -86,8 +86,9 @@ namespace dark
             Item i = new Item(item, rarity, type) { };
             Char.EditItem(type, i);
             p.Image = API.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_" + raritycode[comboboxRarity.Text]);
-            message("item added", "test message" + Environment.NewLine + "item: " + i.stats.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Time to equip: " + i.stats.time_to_equip.ToString() + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);
+            message("item added", "test message" + Environment.NewLine + "item: " + i.stats.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);        
         }
+        
 
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
