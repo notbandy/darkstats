@@ -11,6 +11,8 @@ using System.IO;
 using System.Drawing;
 using dark;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
+using System.Windows.Forms;
 
 namespace database
 {
@@ -18,7 +20,7 @@ namespace database
     public class Character
     {
 
-
+        public static Form1.msg msg;
 
         public Dictionary<string, short> Stats = new Dictionary<string, short>()
         {
@@ -33,7 +35,7 @@ namespace database
             {"Ppowerbonus",0 }
         };
 
-        public Dictionary<string, object> Items = new Dictionary<string, object>()
+        public Dictionary<string, Item> Items = new Dictionary<string, Item>()
         {
             {"Helmet", null },
             {"Chest", null },
@@ -43,14 +45,19 @@ namespace database
             {"Back", null },
             {"Necklace", null },
             {"Ring", null },
-            {"Ring2", null }
+            {"Ring2", null },
+            {"MainHand", null },
+            {"OffHand",null }
         };
 
-        public void EditItem(string itemType, object item)
+        public void EditItem(string itemType, Item item)
         {
             Items[itemType] = item;
         }
-
+        public Character(Form1.msg m)
+        {
+            msg = m;
+        }
     }
 
     public sealed class API
@@ -107,8 +114,20 @@ namespace database
     {
         public static ItemStats pullStats(string url)
         {
-            var parsed = JObject.Parse(API.calljsonapi(url).Replace('[', ' ').Replace(']', ' '))["body"].ToString();
-            return JsonConvert.DeserializeObject<ItemStats>(parsed);
+            
+            try
+            {
+                var parsed = JObject.Parse(API.calljsonapi(url).Replace('[', ' ').Replace(']', ' '))["body"].ToString();
+                return JsonConvert.DeserializeObject<ItemStats>(parsed);
+            }
+            catch
+            {
+                
+                return new ItemStats()
+                { 
+                    name = "not found", rarity = "you fucking idiot"
+                };
+            }
         }
         public string id { get; set; }
         public int cursor { get; set; }
@@ -133,6 +152,11 @@ namespace database
         public float primary_max_armor_rating { get; set; }
         public float primary_min_move_speed { get; set; }
         public float primary_max_move_speed { get; set; }
+        public float primary_max_armor_penetration { get; set; } 
+        public float primary_max_true_physical_damage { get; set; }
+        public float primary_max_weapon_damage { get; set; }
+        public float primary_max_magic_weapon_damage { get; set; }
+        
         public float secondary_min_agility { get; set; }
         public float secondary_max_agility { get; set; }
         public float secondary_min_additional_armor_rating { get; set; }
@@ -198,7 +222,7 @@ namespace database
             this.rarity = rarity;
             this.type = type;
             string spacedName = Regex.Replace(itemName, "([a-z])([A-Z])", "$1 $2");
-            string url = "https://api.darkerdb.com/v1/search?item=" + spacedName + "&rarity=" + rarity;
+            string url = "https://api.darkerdb.com/v1/search?id=" + itemName + "_" + Form1.raritycode[rarity];
             stats = ItemStats.pullStats(url);
         }
         public ItemStats stats { get; set; }

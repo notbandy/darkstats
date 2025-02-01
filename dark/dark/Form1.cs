@@ -14,21 +14,41 @@ using Transitions;
 
 namespace dark
 {
+    
     public partial class Form1 : Form
     {
+        public static Dictionary<string, string> raritycode = new Dictionary<string, string>()
+        {
+            {"Poor", "1001" },
+            {"Common", "2001" },
+            {"Uncommon", "3001" },
+            {"Rare", "4001" },
+            {"Epic", "5001" },
+            {"Legendary", "6001" },
+            {"Unique", "7001" },
+        };
         public void message(string caption, string message, msgbox.Icons i)
         {
             finish f = new finish(msgboxfinish);
-            msgbox m = new msgbox(f, caption, message, msgbox.Icons.Error);
+            if(this.Visible)
+            {
+                msgbox m = new msgbox(f, caption, message, msgbox.Icons.Error);
+
+            }
+            else
+            {
+                msgbox m = new msgbox(null, caption, message, msgbox.Icons.Error);
+            }
             this.Enabled = false;
         }
-
-        Character Char = new Character();
+        public delegate void msg(string c, string t, msgbox.Icons i);
+        public static msg msgdeleg;
+        Character Char = new Character(msgdeleg);
         public Form1()
         {
             InitializeComponent();
             refreshPopulation();
-            
+            msgdeleg = new msg(message);
         }
         public delegate void finish();
         
@@ -65,8 +85,8 @@ namespace dark
         {
             Item i = new Item(item, rarity, type) { };
             Char.EditItem(type, i);
-            p.Image = API.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_6001");
-            message("item added", "test message" + Environment.NewLine + "item: " + i.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Time to equip: " + i.stats.time_to_equip.ToString() + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);
+            p.Image = API.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_" + raritycode[comboboxRarity.Text]);
+            message("item added", "test message" + Environment.NewLine + "item: " + i.stats.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Time to equip: " + i.stats.time_to_equip.ToString() + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);
         }
 
         private unsafe void sButton1_Click(object sender, EventArgs e)
@@ -75,11 +95,12 @@ namespace dark
             panelItemChoose.Top = panelItemChoose.Top + 100;
             panelItemChoose.Show();
             Transition.run(panelItemChoose, "Top", panelItemChoose.Top - 100, new TransitionType_EaseInEaseOut(700));
-            
+            buttonAddItem.Enabled = false;
         }
 
         private void sButton2_Click(object sender, EventArgs e)
         {
+            buttonAddItem.Enabled = true;
             if (comboboxItems.SelectedItem == null)
             {
                 message("error", "you didnt provide an item", msgbox.Icons.Error); return;
@@ -130,7 +151,15 @@ namespace dark
                     usering2 = true;
                 }
             }
-            
+            else if(i <= 25)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "MainHand", ref pbMainHand);
+
+            }    
+            else if(i <= 28)
+            {
+                logItem(comboboxItems.Text, comboboxRarity.Text, "OffHand", ref pbOffHand);
+            }
         }
         int clicks = 0;
         bool usering2 = false;
@@ -180,6 +209,16 @@ namespace dark
         private void comboboxItems_MouseEnter(object sender, EventArgs e)
         {
             
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void sButton1_Click_2(object sender, EventArgs e)
+        {
+            message(Char.Items["OffHand"].stats.primary_max_weapon_damage.ToString(), "asd", msgbox.Icons.Info);
         }
     }
 }

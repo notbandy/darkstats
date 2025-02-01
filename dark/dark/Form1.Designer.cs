@@ -61,6 +61,15 @@ namespace dark
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbMainHand = new System.Windows.Forms.PictureBox();
+            this.pbOffHand = new System.Windows.Forms.PictureBox();
+            this.sEllipse1 = new Sipaa.Framework.SEllipse();
+            this.sEllipse2 = new Sipaa.Framework.SEllipse();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.sEllipse3 = new Sipaa.Framework.SEllipse();
+            this.label7 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.sButton1 = new Sipaa.Framework.SButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -77,6 +86,10 @@ namespace dark
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbHelmet
@@ -230,7 +243,12 @@ namespace dark
             "OwlPendant",
             "RingOfWisdom",
             "RingOfVitality",
-            "RingOfFinesse"});
+            "RingOfFinesse",
+            "ArmingSword",
+            "Longsword",
+            "CastillonDagger",
+            "Hatchet",
+            "Icefang"});
             this.comboboxItems.Location = new System.Drawing.Point(19, 43);
             this.comboboxItems.Name = "comboboxItems";
             this.comboboxItems.Size = new System.Drawing.Size(149, 28);
@@ -296,9 +314,9 @@ namespace dark
             this.buttonConfirmItem.FlatAppearance.BorderSize = 0;
             this.buttonConfirmItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmItem.ForeColor = System.Drawing.Color.White;
-            this.buttonConfirmItem.Location = new System.Drawing.Point(19, 149);
+            this.buttonConfirmItem.Location = new System.Drawing.Point(15, 149);
             this.buttonConfirmItem.Name = "buttonConfirmItem";
-            this.buttonConfirmItem.Size = new System.Drawing.Size(150, 40);
+            this.buttonConfirmItem.Size = new System.Drawing.Size(155, 40);
             this.buttonConfirmItem.TabIndex = 11;
             this.buttonConfirmItem.Text = "Add";
             this.buttonConfirmItem.UseVisualStyleBackColor = false;
@@ -324,7 +342,7 @@ namespace dark
             this.buttonAddItem.FlatAppearance.BorderSize = 0;
             this.buttonAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddItem.ForeColor = System.Drawing.Color.White;
-            this.buttonAddItem.Location = new System.Drawing.Point(33, 475);
+            this.buttonAddItem.Location = new System.Drawing.Point(33, 481);
             this.buttonAddItem.Name = "buttonAddItem";
             this.buttonAddItem.Size = new System.Drawing.Size(291, 39);
             this.buttonAddItem.TabIndex = 11;
@@ -553,26 +571,133 @@ namespace dark
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.pbOffHand, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.pbMainHand, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(101, 106);
             this.tableLayoutPanel5.TabIndex = 15;
+            // 
+            // pbMainHand
+            // 
+            this.pbMainHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMainHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMainHand.Location = new System.Drawing.Point(3, 33);
+            this.pbMainHand.Name = "pbMainHand";
+            this.pbMainHand.Padding = new System.Windows.Forms.Padding(35);
+            this.pbMainHand.Size = new System.Drawing.Size(44, 70);
+            this.pbMainHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMainHand.TabIndex = 9;
+            this.pbMainHand.TabStop = false;
+            // 
+            // pbOffHand
+            // 
+            this.pbOffHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbOffHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbOffHand.Location = new System.Drawing.Point(53, 33);
+            this.pbOffHand.Name = "pbOffHand";
+            this.pbOffHand.Padding = new System.Windows.Forms.Padding(35);
+            this.pbOffHand.Size = new System.Drawing.Size(45, 70);
+            this.pbOffHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOffHand.TabIndex = 10;
+            this.pbOffHand.TabStop = false;
+            // 
+            // sEllipse1
+            // 
+            this.sEllipse1.CornerRadius = 6;
+            this.sEllipse1.TargetControl = this.comboboxItems;
+            // 
+            // sEllipse2
+            // 
+            this.sEllipse2.CornerRadius = 6;
+            this.sEllipse2.TargetControl = this.comboboxRarity;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.Controls.Add(this.sButton1);
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Location = new System.Drawing.Point(145, 47);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(323, 536);
+            this.panel1.TabIndex = 15;
+            // 
+            // sEllipse3
+            // 
+            this.sEllipse3.CornerRadius = 6;
+            this.sEllipse3.TargetControl = this.panel1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(19, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Player stats";
+            // 
+            // listView1
+            // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(24, 54);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(276, 413);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // sButton1
+            // 
+            this.sButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.sButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
+            this.sButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sButton1.BorderRadius = 6;
+            this.sButton1.BorderSize = 0;
+            this.sButton1.FlatAppearance.BorderSize = 0;
+            this.sButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sButton1.ForeColor = System.Drawing.Color.White;
+            this.sButton1.Location = new System.Drawing.Point(23, 481);
+            this.sButton1.Name = "sButton1";
+            this.sButton1.Size = new System.Drawing.Size(277, 39);
+            this.sButton1.TabIndex = 12;
+            this.sButton1.Text = "Add Item";
+            this.sButton1.UseVisualStyleBackColor = false;
+            this.sButton1.Click += new System.EventHandler(this.sButton1_Click_2);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1207, 601);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.sPanel2);
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.panelItemChoose);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ForeColor = System.Drawing.Color.White;
             this.MinimumSize = new System.Drawing.Size(1223, 640);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).EndInit();
@@ -592,6 +717,11 @@ namespace dark
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -629,6 +759,15 @@ namespace dark
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.PictureBox pbOffHand;
+        private System.Windows.Forms.PictureBox pbMainHand;
+        private Sipaa.Framework.SEllipse sEllipse1;
+        private Sipaa.Framework.SEllipse sEllipse2;
+        private System.Windows.Forms.Panel panel1;
+        private Sipaa.Framework.SEllipse sEllipse3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ListView listView1;
+        private Sipaa.Framework.SButton sButton1;
     }
 }
 

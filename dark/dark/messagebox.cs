@@ -16,7 +16,7 @@ namespace dark
     public partial class msgbox : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
+        public static extern IntPtr CreateRoundRectRgn
         (
             int nLeftRect,     // x-coordinate of upper-left corner
             int nTopRect,      // y-coordinate of upper-left corner
@@ -63,14 +63,20 @@ namespace dark
 
         private void sButton1_Click(object sender, EventArgs e)
         {
-            fein();
+            if (fein != null)
+            {
+                fein();
+            }
             Close();
             
         }
 
         private void sButton2_Click(object sender, EventArgs e)
         {
-            fein();
+            if (fein != null)
+            {
+                fein();
+            }
             Close();
             
         }
