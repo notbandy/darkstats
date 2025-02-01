@@ -171,5 +171,15 @@ namespace dark
                 refreshPopulation();
             }
         }
+        
+        private void comboboxItems_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboboxItems_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

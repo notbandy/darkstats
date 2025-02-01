@@ -57,6 +57,10 @@ namespace dark
             this.label6 = new System.Windows.Forms.Label();
             this.labelDungeon = new System.Windows.Forms.Label();
             this.sButton2 = new Sipaa.Framework.SButton();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -70,48 +74,63 @@ namespace dark
             this.sPanel1.SuspendLayout();
             this.sPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbHelmet
             // 
-            this.pbHelmet.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pbHelmet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbHelmet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbHelmet.Location = new System.Drawing.Point(133, 27);
+            this.pbHelmet.Location = new System.Drawing.Point(110, 3);
             this.pbHelmet.Name = "pbHelmet";
-            this.pbHelmet.Size = new System.Drawing.Size(88, 88);
+            this.pbHelmet.Padding = new System.Windows.Forms.Padding(25);
+            this.pbHelmet.Size = new System.Drawing.Size(101, 106);
             this.pbHelmet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHelmet.TabIndex = 0;
             this.pbHelmet.TabStop = false;
             // 
             // pbChest
             // 
-            this.pbChest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pbChest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbChest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbChest.Location = new System.Drawing.Point(133, 131);
+            this.pbChest.Location = new System.Drawing.Point(110, 115);
             this.pbChest.Name = "pbChest";
-            this.pbChest.Size = new System.Drawing.Size(88, 168);
+            this.pbChest.Padding = new System.Windows.Forms.Padding(25);
+            this.pbChest.Size = new System.Drawing.Size(101, 205);
             this.pbChest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbChest.TabIndex = 1;
             this.pbChest.TabStop = false;
             // 
             // pbLeg
             // 
-            this.pbLeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbLeg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLeg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLeg.Location = new System.Drawing.Point(135, 326);
+            this.pbLeg.Location = new System.Drawing.Point(110, 326);
             this.pbLeg.Name = "pbLeg";
-            this.pbLeg.Size = new System.Drawing.Size(85, 121);
+            this.pbLeg.Padding = new System.Windows.Forms.Padding(25);
+            this.pbLeg.Size = new System.Drawing.Size(101, 120);
             this.pbLeg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLeg.TabIndex = 2;
             this.pbLeg.TabStop = false;
             // 
             // pbFoot
             // 
-            this.pbFoot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbFoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbFoot.Location = new System.Drawing.Point(244, 372);
+            this.pbFoot.Location = new System.Drawing.Point(217, 326);
             this.pbFoot.Name = "pbFoot";
-            this.pbFoot.Size = new System.Drawing.Size(80, 75);
+            this.pbFoot.Padding = new System.Windows.Forms.Padding(25);
+            this.pbFoot.Size = new System.Drawing.Size(103, 120);
             this.pbFoot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbFoot.TabIndex = 3;
             this.pbFoot.TabStop = false;
@@ -119,66 +138,73 @@ namespace dark
             // 
             // pbBack
             // 
-            this.pbBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pbBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbBack.Location = new System.Drawing.Point(246, 143);
+            this.pbBack.Location = new System.Drawing.Point(3, 3);
             this.pbBack.Name = "pbBack";
-            this.pbBack.Size = new System.Drawing.Size(62, 115);
+            this.pbBack.Padding = new System.Windows.Forms.Padding(25);
+            this.pbBack.Size = new System.Drawing.Size(97, 151);
             this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbBack.TabIndex = 4;
             this.pbBack.TabStop = false;
             // 
             // pbRing2
             // 
-            this.pbRing2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbRing2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbRing2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRing2.Location = new System.Drawing.Point(248, 277);
+            this.pbRing2.Location = new System.Drawing.Point(33, 162);
             this.pbRing2.Name = "pbRing2";
-            this.pbRing2.Size = new System.Drawing.Size(26, 22);
+            this.pbRing2.Size = new System.Drawing.Size(37, 37);
             this.pbRing2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbRing2.TabIndex = 5;
             this.pbRing2.TabStop = false;
             // 
             // pbRing1
             // 
-            this.pbRing1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbRing1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbRing1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbRing1.Location = new System.Drawing.Point(82, 277);
+            this.pbRing1.Location = new System.Drawing.Point(32, 141);
             this.pbRing1.Name = "pbRing1";
-            this.pbRing1.Size = new System.Drawing.Size(26, 22);
+            this.pbRing1.Size = new System.Drawing.Size(37, 37);
             this.pbRing1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbRing1.TabIndex = 6;
             this.pbRing1.TabStop = false;
             // 
             // pbHands
             // 
-            this.pbHands.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pbHands.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbHands.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbHands.Location = new System.Drawing.Point(33, 150);
+            this.pbHands.Location = new System.Drawing.Point(3, 3);
             this.pbHands.Name = "pbHands";
-            this.pbHands.Size = new System.Drawing.Size(74, 69);
+            this.pbHands.Padding = new System.Windows.Forms.Padding(25);
+            this.pbHands.Size = new System.Drawing.Size(95, 109);
             this.pbHands.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbHands.TabIndex = 7;
             this.pbHands.TabStop = false;
             // 
             // pbNecklace
             // 
-            this.pbNecklace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbNecklace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pbNecklace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbNecklace.Location = new System.Drawing.Point(245, 101);
+            this.pbNecklace.Location = new System.Drawing.Point(217, 62);
             this.pbNecklace.Name = "pbNecklace";
-            this.pbNecklace.Size = new System.Drawing.Size(32, 32);
+            this.pbNecklace.Padding = new System.Windows.Forms.Padding(35);
+            this.pbNecklace.Size = new System.Drawing.Size(47, 47);
             this.pbNecklace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbNecklace.TabIndex = 8;
             this.pbNecklace.TabStop = false;
             // 
             // comboboxItems
             // 
-            this.comboboxItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboboxItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(160)))), ((int)(((byte)(42)))));
             this.comboboxItems.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.comboboxItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboboxItems.ForeColor = System.Drawing.Color.White;
+            this.comboboxItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboboxItems.ForeColor = System.Drawing.Color.Black;
             this.comboboxItems.FormattingEnabled = true;
             this.comboboxItems.Items.AddRange(new object[] {
             "CrusaderHelm",
@@ -209,11 +235,12 @@ namespace dark
             this.comboboxItems.Name = "comboboxItems";
             this.comboboxItems.Size = new System.Drawing.Size(149, 28);
             this.comboboxItems.TabIndex = 9;
+            this.comboboxItems.MouseEnter += new System.EventHandler(this.comboboxItems_MouseEnter);
+            this.comboboxItems.MouseLeave += new System.EventHandler(this.comboboxItems_MouseLeave);
             // 
             // panelItemChoose
             // 
-            this.panelItemChoose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelItemChoose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panelItemChoose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
             this.panelItemChoose.BorderColor = System.Drawing.Color.SaddleBrown;
             this.panelItemChoose.BorderRadius = 6;
@@ -241,10 +268,11 @@ namespace dark
             // 
             // comboboxRarity
             // 
-            this.comboboxRarity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(33)))), ((int)(((byte)(30)))));
+            this.comboboxRarity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(160)))), ((int)(((byte)(42)))));
             this.comboboxRarity.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.comboboxRarity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxRarity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboboxRarity.ForeColor = System.Drawing.Color.White;
+            this.comboboxRarity.ForeColor = System.Drawing.Color.Black;
             this.comboboxRarity.FormattingEnabled = true;
             this.comboboxRarity.Items.AddRange(new object[] {
             "Poor",
@@ -306,21 +334,15 @@ namespace dark
             // 
             // sPanel1
             // 
-            this.sPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.sPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.sPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.sPanel1.BorderRadius = 8;
             this.sPanel1.BorderSize = 0;
-            this.sPanel1.Controls.Add(this.pbBack);
-            this.sPanel1.Controls.Add(this.pbHelmet);
+            this.sPanel1.Controls.Add(this.tableLayoutPanel2);
             this.sPanel1.Controls.Add(this.buttonAddItem);
-            this.sPanel1.Controls.Add(this.pbChest);
-            this.sPanel1.Controls.Add(this.pbLeg);
-            this.sPanel1.Controls.Add(this.pbNecklace);
-            this.sPanel1.Controls.Add(this.pbFoot);
-            this.sPanel1.Controls.Add(this.pbHands);
-            this.sPanel1.Controls.Add(this.pbRing2);
-            this.sPanel1.Controls.Add(this.pbRing1);
             this.sPanel1.ForeColor = System.Drawing.Color.White;
             this.sPanel1.Location = new System.Drawing.Point(474, 47);
             this.sPanel1.Name = "sPanel1";
@@ -463,6 +485,81 @@ namespace dark
             this.sButton2.UseVisualStyleBackColor = false;
             this.sButton2.Click += new System.EventHandler(this.sButton2_Click_1);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pbLeg, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.pbFoot, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.pbHelmet, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pbNecklace, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pbChest, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(18, 18);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.21603F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.83964F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(323, 449);
+            this.tableLayoutPanel2.TabIndex = 12;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.pbBack, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.pbRing2, 0, 1);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(217, 115);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.58537F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.41463F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(103, 205);
+            this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.pbHands, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.pbRing1, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 115);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.09756F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.90244F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(101, 205);
+            this.tableLayoutPanel4.TabIndex = 5;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(101, 106);
+            this.tableLayoutPanel5.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -472,7 +569,7 @@ namespace dark
             this.Controls.Add(this.sPanel1);
             this.Controls.Add(this.panelItemChoose);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.MinimumSize = new System.Drawing.Size(1110, 640);
+            this.MinimumSize = new System.Drawing.Size(1223, 640);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -492,6 +589,9 @@ namespace dark
             this.sPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -525,6 +625,10 @@ namespace dark
         private System.Windows.Forms.Label labelPlayersOnline;
         private System.Windows.Forms.Label label4;
         private Sipaa.Framework.SButton sButton2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }
 
