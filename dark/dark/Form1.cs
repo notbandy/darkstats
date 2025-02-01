@@ -10,6 +10,7 @@ using bandysharp.Collections;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using Transitions;
 
 namespace dark
 {
@@ -26,10 +27,20 @@ namespace dark
         public Form1()
         {
             InitializeComponent();
+            refreshPopulation();
             
         }
         public delegate void finish();
         
+        public void refreshPopulation()
+        {
+            ServerPopulation sp = ServerPopulation.pullPopulation(); //init new server population object
+            labelPlayersOnline.Text = sp.num_online.ToString(); //online
+            labelInLobby.Text = sp.num_lobby.ToString(); //lobby
+            labelDungeon.Text = sp.num_dungeon.ToString(); //dungeon
+            refreshed = DateTime.UtcNow;
+        }
+
         public void msgboxfinish()
         {
             Thread th = new Thread(() =>
@@ -52,16 +63,18 @@ namespace dark
 
         void logItem(string item, string rarity, string type, ref PictureBox p)
         {
-            Char.EditItem(type, new Item(item, rarity, type) { });
-            p.Image = Char.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_6001");
-            
+            Item i = new Item(item, rarity, type) { };
+            Char.EditItem(type, i);
+            p.Image = API.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_6001");
+            message("item added", "test message" + Environment.NewLine + "item: " + i.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Time to equip: " + i.stats.time_to_equip.ToString() + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);
         }
 
         private unsafe void sButton1_Click(object sender, EventArgs e)
         {
             //fib(new LigmaMap<Dictionary<LigmaMap<string, int>, short>, LinkedList<SByte>>(), 1);
+            panelItemChoose.Top = panelItemChoose.Top + 100;
             panelItemChoose.Show();
-
+            Transition.run(panelItemChoose, "Top", panelItemChoose.Top - 100, new TransitionType_EaseInEaseOut(700));
             
         }
 
@@ -143,11 +156,20 @@ namespace dark
 
         private void sButton1_Click_1(object sender, EventArgs e)
         {
-            message("crusader response", Char.calljsonapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
+            message("crusader response", API.calljsonapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
             //if you check messagebox.cs i've made it so that longer texts make the box expand
             //useful if you ever need long popups
-            //message("test response", Char.calljsonapi("https://api.darkerdb.com/v1/health-check"), msgbox.Icons.Info); //just an api req test
+            //message("test response", API.calljsonapi("https://api.darkerdb.com/v1/health-check"), msgbox.Icons.Info); //just an api req test
             //this wont expand the msgbox
+        }
+        DateTime refreshed;
+        private void sButton2_Click_1(object sender, EventArgs e)
+        {
+            if (DateTime.UtcNow - refreshed > TimeSpan.FromSeconds(7))
+            {
+                message("success", "server population refreshed successfully", msgbox.Icons.Info);
+                refreshPopulation();
+            }
         }
     }
 }

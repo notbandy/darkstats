@@ -41,3 +41,5 @@ C:\Users\Msi\Source\Repos\darkstats\dark\dark\obj\Debug\dark.csproj.CoreCompileI
 C:\Users\Msi\Source\Repos\darkstats\dark\dark\obj\Debug\dark.csproj.Up2Date
 C:\Users\Msi\Source\Repos\darkstats\dark\dark\obj\Debug\dark.exe
 C:\Users\Msi\Source\Repos\darkstats\dark\dark\obj\Debug\dark.pdb
+E:\#csharp\darktracker\dark\dark\bin\Debug\Newtonsoft.Json.dll
+E:\#csharp\darktracker\dark\dark\bin\Debug\Newtonsoft.Json.xml

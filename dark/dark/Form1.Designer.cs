@@ -29,6 +29,7 @@ namespace dark
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pbHelmet = new System.Windows.Forms.PictureBox();
             this.pbChest = new System.Windows.Forms.PictureBox();
             this.pbLeg = new System.Windows.Forms.PictureBox();
@@ -45,8 +46,17 @@ namespace dark
             this.buttonConfirmItem = new Sipaa.Framework.SButton();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
-            this.sButton1 = new Sipaa.Framework.SButton();
             this.sPanel1 = new Sipaa.Framework.SPanel();
+            this.sPanel2 = new Sipaa.Framework.SPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelPlayersOnline = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelInLobby = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelDungeon = new System.Windows.Forms.Label();
+            this.sButton2 = new Sipaa.Framework.SButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -58,10 +68,13 @@ namespace dark
             ((System.ComponentModel.ISupportInitialize)(this.pbNecklace)).BeginInit();
             this.panelItemChoose.SuspendLayout();
             this.sPanel1.SuspendLayout();
+            this.sPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbHelmet
             // 
+            this.pbHelmet.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pbHelmet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbHelmet.Location = new System.Drawing.Point(133, 27);
             this.pbHelmet.Name = "pbHelmet";
@@ -72,6 +85,7 @@ namespace dark
             // 
             // pbChest
             // 
+            this.pbChest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pbChest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbChest.Location = new System.Drawing.Point(133, 131);
             this.pbChest.Name = "pbChest";
@@ -82,6 +96,7 @@ namespace dark
             // 
             // pbLeg
             // 
+            this.pbLeg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbLeg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbLeg.Location = new System.Drawing.Point(135, 326);
             this.pbLeg.Name = "pbLeg";
@@ -92,6 +107,7 @@ namespace dark
             // 
             // pbFoot
             // 
+            this.pbFoot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbFoot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbFoot.Location = new System.Drawing.Point(244, 372);
             this.pbFoot.Name = "pbFoot";
@@ -103,6 +119,8 @@ namespace dark
             // 
             // pbBack
             // 
+            this.pbBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pbBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbBack.Location = new System.Drawing.Point(246, 143);
             this.pbBack.Name = "pbBack";
@@ -113,6 +131,7 @@ namespace dark
             // 
             // pbRing2
             // 
+            this.pbRing2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbRing2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbRing2.Location = new System.Drawing.Point(248, 277);
             this.pbRing2.Name = "pbRing2";
@@ -123,6 +142,7 @@ namespace dark
             // 
             // pbRing1
             // 
+            this.pbRing1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pbRing1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbRing1.Location = new System.Drawing.Point(82, 277);
             this.pbRing1.Name = "pbRing1";
@@ -133,6 +153,7 @@ namespace dark
             // 
             // pbHands
             // 
+            this.pbHands.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pbHands.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbHands.Location = new System.Drawing.Point(33, 150);
             this.pbHands.Name = "pbHands";
@@ -143,6 +164,7 @@ namespace dark
             // 
             // pbNecklace
             // 
+            this.pbNecklace.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbNecklace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbNecklace.Location = new System.Drawing.Point(245, 101);
             this.pbNecklace.Name = "pbNecklace";
@@ -202,7 +224,7 @@ namespace dark
             this.panelItemChoose.Controls.Add(this.label1);
             this.panelItemChoose.Controls.Add(this.comboboxItems);
             this.panelItemChoose.ForeColor = System.Drawing.Color.White;
-            this.panelItemChoose.Location = new System.Drawing.Point(737, 197);
+            this.panelItemChoose.Location = new System.Drawing.Point(850, 197);
             this.panelItemChoose.Name = "panelItemChoose";
             this.panelItemChoose.Size = new System.Drawing.Size(187, 202);
             this.panelItemChoose.TabIndex = 10;
@@ -265,7 +287,8 @@ namespace dark
             // 
             // buttonAddItem
             // 
-            this.buttonAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
             this.buttonAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.buttonAddItem.BorderRadius = 6;
@@ -281,28 +304,12 @@ namespace dark
             this.buttonAddItem.UseVisualStyleBackColor = false;
             this.buttonAddItem.Click += new System.EventHandler(this.sButton1_Click);
             // 
-            // sButton1
-            // 
-            this.sButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(143)))), ((int)(((byte)(37)))));
-            this.sButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sButton1.BorderRadius = 6;
-            this.sButton1.BorderSize = 0;
-            this.sButton1.FlatAppearance.BorderSize = 0;
-            this.sButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sButton1.ForeColor = System.Drawing.Color.White;
-            this.sButton1.Location = new System.Drawing.Point(906, 12);
-            this.sButton1.Name = "sButton1";
-            this.sButton1.Size = new System.Drawing.Size(176, 40);
-            this.sButton1.TabIndex = 12;
-            this.sButton1.Text = "example api request";
-            this.sButton1.UseVisualStyleBackColor = false;
-            this.sButton1.Click += new System.EventHandler(this.sButton1_Click_1);
-            // 
             // sPanel1
             // 
+            this.sPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.sPanel1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sPanel1.BorderRadius = 6;
+            this.sPanel1.BorderRadius = 8;
             this.sPanel1.BorderSize = 0;
             this.sPanel1.Controls.Add(this.pbBack);
             this.sPanel1.Controls.Add(this.pbHelmet);
@@ -315,18 +322,154 @@ namespace dark
             this.sPanel1.Controls.Add(this.pbRing2);
             this.sPanel1.Controls.Add(this.pbRing1);
             this.sPanel1.ForeColor = System.Drawing.Color.White;
-            this.sPanel1.Location = new System.Drawing.Point(361, 47);
+            this.sPanel1.Location = new System.Drawing.Point(474, 47);
             this.sPanel1.Name = "sPanel1";
             this.sPanel1.Size = new System.Drawing.Size(359, 539);
             this.sPanel1.TabIndex = 13;
+            // 
+            // sPanel2
+            // 
+            this.sPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.sPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sPanel2.BorderRadius = 8;
+            this.sPanel2.BorderSize = 0;
+            this.sPanel2.Controls.Add(this.sButton2);
+            this.sPanel2.Controls.Add(this.tableLayoutPanel1);
+            this.sPanel2.Controls.Add(this.label3);
+            this.sPanel2.ForeColor = System.Drawing.Color.White;
+            this.sPanel2.Location = new System.Drawing.Point(850, 448);
+            this.sPanel2.Name = "sPanel2";
+            this.sPanel2.Size = new System.Drawing.Size(345, 138);
+            this.sPanel2.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(10, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Current server population";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.labelDungeon, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelInLobby, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelPlayersOnline, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 33);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 102);
+            this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 33);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Players online:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelPlayersOnline
+            // 
+            this.labelPlayersOnline.AutoSize = true;
+            this.labelPlayersOnline.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPlayersOnline.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPlayersOnline.Location = new System.Drawing.Point(163, 0);
+            this.labelPlayersOnline.Name = "labelPlayersOnline";
+            this.labelPlayersOnline.Size = new System.Drawing.Size(154, 33);
+            this.labelPlayersOnline.TabIndex = 13;
+            this.labelPlayersOnline.Text = "0";
+            this.labelPlayersOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(3, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 33);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "In lobby:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelInLobby
+            // 
+            this.labelInLobby.AutoSize = true;
+            this.labelInLobby.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelInLobby.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelInLobby.Location = new System.Drawing.Point(163, 33);
+            this.labelInLobby.Name = "labelInLobby";
+            this.labelInLobby.Size = new System.Drawing.Size(154, 33);
+            this.labelInLobby.TabIndex = 15;
+            this.labelInLobby.Text = "0";
+            this.labelInLobby.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(3, 66);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 36);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "In dungeon:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelDungeon
+            // 
+            this.labelDungeon.AutoSize = true;
+            this.labelDungeon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelDungeon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDungeon.Location = new System.Drawing.Point(163, 66);
+            this.labelDungeon.Name = "labelDungeon";
+            this.labelDungeon.Size = new System.Drawing.Size(154, 36);
+            this.labelDungeon.TabIndex = 17;
+            this.labelDungeon.Text = "0";
+            this.labelDungeon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sButton2
+            // 
+            this.sButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.sButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sButton2.BackgroundImage")));
+            this.sButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sButton2.BorderRadius = 6;
+            this.sButton2.BorderSize = 0;
+            this.sButton2.FlatAppearance.BorderSize = 0;
+            this.sButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sButton2.ForeColor = System.Drawing.Color.White;
+            this.sButton2.Location = new System.Drawing.Point(310, 4);
+            this.sButton2.Name = "sButton2";
+            this.sButton2.Size = new System.Drawing.Size(27, 30);
+            this.sButton2.TabIndex = 13;
+            this.sButton2.UseVisualStyleBackColor = false;
+            this.sButton2.Click += new System.EventHandler(this.sButton2_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1094, 601);
+            this.ClientSize = new System.Drawing.Size(1207, 601);
+            this.Controls.Add(this.sPanel2);
             this.Controls.Add(this.sPanel1);
-            this.Controls.Add(this.sButton1);
             this.Controls.Add(this.panelItemChoose);
             this.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.MinimumSize = new System.Drawing.Size(1110, 640);
@@ -345,6 +488,10 @@ namespace dark
             this.panelItemChoose.ResumeLayout(false);
             this.panelItemChoose.PerformLayout();
             this.sPanel1.ResumeLayout(false);
+            this.sPanel2.ResumeLayout(false);
+            this.sPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,8 +514,17 @@ namespace dark
         private Sipaa.Framework.SButton buttonConfirmItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboboxRarity;
-        private Sipaa.Framework.SButton sButton1;
         private Sipaa.Framework.SPanel sPanel1;
+        private Sipaa.Framework.SPanel sPanel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label labelDungeon;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelInLobby;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelPlayersOnline;
+        private System.Windows.Forms.Label label4;
+        private Sipaa.Framework.SButton sButton2;
     }
 }
 

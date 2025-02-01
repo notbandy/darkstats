@@ -56,7 +56,7 @@ namespace dark
                 this.Region = new Region(new Rectangle(this.Left, this.Top, this.Size.Width, this.Size.Height));
             }
             Show();
-            this.Top = 0;
+            this.Top = 50;
             
             Transition.run(this, "Top", Screen.PrimaryScreen.Bounds.Height / 2 - 170, new TransitionType_EaseInEaseOut(800));
         }
