@@ -1,1 +1,1 @@
-I hate nigg- 
+#Official repository for darkstats#
