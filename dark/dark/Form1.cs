@@ -183,7 +183,7 @@ namespace dark
             });
             th.Start();
         }
-
+        
         private void sButton1_Click_1(object sender, EventArgs e)
         {
             message("crusader response", API.calljsonapi("https://api.darkerdb.com/v1/search?item=Crusader%20Helm&rarity=Legendary"), msgbox.Icons.Info); //getting cursader helmet
