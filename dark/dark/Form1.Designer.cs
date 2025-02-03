@@ -47,29 +47,29 @@ namespace dark
             this.label1 = new System.Windows.Forms.Label();
             this.buttonAddItem = new Sipaa.Framework.SButton();
             this.sPanel1 = new Sipaa.Framework.SPanel();
-            this.sPanel2 = new Sipaa.Framework.SPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.labelPlayersOnline = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelInLobby = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelDungeon = new System.Windows.Forms.Label();
-            this.sButton2 = new Sipaa.Framework.SButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.pbOffHand = new System.Windows.Forms.PictureBox();
+            this.pbMainHand = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbMainHand = new System.Windows.Forms.PictureBox();
-            this.pbOffHand = new System.Windows.Forms.PictureBox();
+            this.sPanel2 = new Sipaa.Framework.SPanel();
+            this.sButton2 = new Sipaa.Framework.SButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelDungeon = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelInLobby = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelPlayersOnline = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.sEllipse1 = new Sipaa.Framework.SEllipse();
             this.sEllipse2 = new Sipaa.Framework.SEllipse();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.sEllipse3 = new Sipaa.Framework.SEllipse();
-            this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.sButton1 = new Sipaa.Framework.SButton();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sEllipse3 = new Sipaa.Framework.SEllipse();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -81,14 +81,14 @@ namespace dark
             ((System.ComponentModel.ISupportInitialize)(this.pbNecklace)).BeginInit();
             this.panelItemChoose.SuspendLayout();
             this.sPanel1.SuspendLayout();
-            this.sPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).BeginInit();
+            this.sPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -367,142 +367,6 @@ namespace dark
             this.sPanel1.Size = new System.Drawing.Size(359, 539);
             this.sPanel1.TabIndex = 13;
             // 
-            // sPanel2
-            // 
-            this.sPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.sPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.sPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sPanel2.BorderRadius = 8;
-            this.sPanel2.BorderSize = 0;
-            this.sPanel2.Controls.Add(this.sButton2);
-            this.sPanel2.Controls.Add(this.tableLayoutPanel1);
-            this.sPanel2.Controls.Add(this.label3);
-            this.sPanel2.ForeColor = System.Drawing.Color.White;
-            this.sPanel2.Location = new System.Drawing.Point(850, 448);
-            this.sPanel2.Name = "sPanel2";
-            this.sPanel2.Size = new System.Drawing.Size(345, 138);
-            this.sPanel2.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(10, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(187, 20);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Current server population";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.labelDungeon, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.labelInLobby, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelPlayersOnline, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 33);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 102);
-            this.tableLayoutPanel1.TabIndex = 12;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(154, 33);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Players online:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelPlayersOnline
-            // 
-            this.labelPlayersOnline.AutoSize = true;
-            this.labelPlayersOnline.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelPlayersOnline.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelPlayersOnline.Location = new System.Drawing.Point(163, 0);
-            this.labelPlayersOnline.Name = "labelPlayersOnline";
-            this.labelPlayersOnline.Size = new System.Drawing.Size(154, 33);
-            this.labelPlayersOnline.TabIndex = 13;
-            this.labelPlayersOnline.Text = "0";
-            this.labelPlayersOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(3, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 33);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "In lobby:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelInLobby
-            // 
-            this.labelInLobby.AutoSize = true;
-            this.labelInLobby.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelInLobby.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelInLobby.Location = new System.Drawing.Point(163, 33);
-            this.labelInLobby.Name = "labelInLobby";
-            this.labelInLobby.Size = new System.Drawing.Size(154, 33);
-            this.labelInLobby.TabIndex = 15;
-            this.labelInLobby.Text = "0";
-            this.labelInLobby.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(3, 66);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 36);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "In dungeon:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelDungeon
-            // 
-            this.labelDungeon.AutoSize = true;
-            this.labelDungeon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelDungeon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelDungeon.Location = new System.Drawing.Point(163, 66);
-            this.labelDungeon.Name = "labelDungeon";
-            this.labelDungeon.Size = new System.Drawing.Size(154, 36);
-            this.labelDungeon.TabIndex = 17;
-            this.labelDungeon.Text = "0";
-            this.labelDungeon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // sButton2
-            // 
-            this.sButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.sButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sButton2.BackgroundImage")));
-            this.sButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.sButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.sButton2.BorderRadius = 6;
-            this.sButton2.BorderSize = 0;
-            this.sButton2.FlatAppearance.BorderSize = 0;
-            this.sButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sButton2.ForeColor = System.Drawing.Color.White;
-            this.sButton2.Location = new System.Drawing.Point(310, 4);
-            this.sButton2.Name = "sButton2";
-            this.sButton2.Size = new System.Drawing.Size(27, 30);
-            this.sButton2.TabIndex = 13;
-            this.sButton2.UseVisualStyleBackColor = false;
-            this.sButton2.Click += new System.EventHandler(this.sButton2_Click_1);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -528,6 +392,52 @@ namespace dark
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.83964F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(323, 449);
             this.tableLayoutPanel2.TabIndex = 12;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.pbOffHand, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.pbMainHand, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(101, 106);
+            this.tableLayoutPanel5.TabIndex = 15;
+            // 
+            // pbOffHand
+            // 
+            this.pbOffHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbOffHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbOffHand.Location = new System.Drawing.Point(53, 33);
+            this.pbOffHand.Name = "pbOffHand";
+            this.pbOffHand.Padding = new System.Windows.Forms.Padding(35);
+            this.pbOffHand.Size = new System.Drawing.Size(45, 70);
+            this.pbOffHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbOffHand.TabIndex = 10;
+            this.pbOffHand.TabStop = false;
+            // 
+            // pbMainHand
+            // 
+            this.pbMainHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMainHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbMainHand.Location = new System.Drawing.Point(3, 33);
+            this.pbMainHand.Name = "pbMainHand";
+            this.pbMainHand.Padding = new System.Windows.Forms.Padding(35);
+            this.pbMainHand.Size = new System.Drawing.Size(44, 70);
+            this.pbMainHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMainHand.TabIndex = 9;
+            this.pbMainHand.TabStop = false;
             // 
             // tableLayoutPanel3
             // 
@@ -563,51 +473,141 @@ namespace dark
             this.tableLayoutPanel4.Size = new System.Drawing.Size(101, 205);
             this.tableLayoutPanel4.TabIndex = 5;
             // 
-            // tableLayoutPanel5
+            // sPanel2
             // 
-            this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.pbOffHand, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.pbMainHand, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(101, 106);
-            this.tableLayoutPanel5.TabIndex = 15;
+            this.sPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.sPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.sPanel2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sPanel2.BorderRadius = 8;
+            this.sPanel2.BorderSize = 0;
+            this.sPanel2.Controls.Add(this.sButton2);
+            this.sPanel2.Controls.Add(this.tableLayoutPanel1);
+            this.sPanel2.Controls.Add(this.label3);
+            this.sPanel2.ForeColor = System.Drawing.Color.White;
+            this.sPanel2.Location = new System.Drawing.Point(850, 448);
+            this.sPanel2.Name = "sPanel2";
+            this.sPanel2.Size = new System.Drawing.Size(345, 138);
+            this.sPanel2.TabIndex = 14;
             // 
-            // pbMainHand
+            // sButton2
             // 
-            this.pbMainHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMainHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbMainHand.Location = new System.Drawing.Point(3, 33);
-            this.pbMainHand.Name = "pbMainHand";
-            this.pbMainHand.Padding = new System.Windows.Forms.Padding(35);
-            this.pbMainHand.Size = new System.Drawing.Size(44, 70);
-            this.pbMainHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMainHand.TabIndex = 9;
-            this.pbMainHand.TabStop = false;
+            this.sButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.sButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sButton2.BackgroundImage")));
+            this.sButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.sButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.sButton2.BorderRadius = 6;
+            this.sButton2.BorderSize = 0;
+            this.sButton2.FlatAppearance.BorderSize = 0;
+            this.sButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sButton2.ForeColor = System.Drawing.Color.White;
+            this.sButton2.Location = new System.Drawing.Point(310, 4);
+            this.sButton2.Name = "sButton2";
+            this.sButton2.Size = new System.Drawing.Size(27, 30);
+            this.sButton2.TabIndex = 13;
+            this.sButton2.UseVisualStyleBackColor = false;
+            this.sButton2.Click += new System.EventHandler(this.sButton2_Click_1);
             // 
-            // pbOffHand
+            // tableLayoutPanel1
             // 
-            this.pbOffHand.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbOffHand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbOffHand.Location = new System.Drawing.Point(53, 33);
-            this.pbOffHand.Name = "pbOffHand";
-            this.pbOffHand.Padding = new System.Windows.Forms.Padding(35);
-            this.pbOffHand.Size = new System.Drawing.Size(45, 70);
-            this.pbOffHand.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbOffHand.TabIndex = 10;
-            this.pbOffHand.TabStop = false;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.labelDungeon, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.labelInLobby, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelPlayersOnline, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 33);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(320, 102);
+            this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // labelDungeon
+            // 
+            this.labelDungeon.AutoSize = true;
+            this.labelDungeon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelDungeon.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDungeon.Location = new System.Drawing.Point(163, 68);
+            this.labelDungeon.Name = "labelDungeon";
+            this.labelDungeon.Size = new System.Drawing.Size(154, 34);
+            this.labelDungeon.TabIndex = 17;
+            this.labelDungeon.Text = "0";
+            this.labelDungeon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(3, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 34);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "In dungeon:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelInLobby
+            // 
+            this.labelInLobby.AutoSize = true;
+            this.labelInLobby.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelInLobby.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelInLobby.Location = new System.Drawing.Point(163, 34);
+            this.labelInLobby.Name = "labelInLobby";
+            this.labelInLobby.Size = new System.Drawing.Size(154, 34);
+            this.labelInLobby.TabIndex = 15;
+            this.labelInLobby.Text = "0";
+            this.labelInLobby.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(3, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 34);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "In lobby:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelPlayersOnline
+            // 
+            this.labelPlayersOnline.AutoSize = true;
+            this.labelPlayersOnline.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPlayersOnline.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelPlayersOnline.Location = new System.Drawing.Point(163, 0);
+            this.labelPlayersOnline.Name = "labelPlayersOnline";
+            this.labelPlayersOnline.Size = new System.Drawing.Size(154, 34);
+            this.labelPlayersOnline.TabIndex = 13;
+            this.labelPlayersOnline.Text = "0";
+            this.labelPlayersOnline.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(154, 34);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Players online:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(10, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Current server population";
             // 
             // sEllipse1
             // 
@@ -632,37 +632,6 @@ namespace dark
             this.panel1.Size = new System.Drawing.Size(323, 536);
             this.panel1.TabIndex = 15;
             // 
-            // sEllipse3
-            // 
-            this.sEllipse3.CornerRadius = 6;
-            this.sEllipse3.TargetControl = this.panel1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(19, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 20);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Player stats";
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(24, 54);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(276, 413);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
             // sButton1
             // 
             this.sButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -682,6 +651,37 @@ namespace dark
             this.sButton1.UseVisualStyleBackColor = false;
             this.sButton1.Click += new System.EventHandler(this.sButton1_Click_2);
             // 
+            // listView1
+            // 
+            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(24, 54);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(276, 413);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(19, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Player stats";
+            // 
+            // sEllipse3
+            // 
+            this.sEllipse3.CornerRadius = 6;
+            this.sEllipse3.TargetControl = this.panel1;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -696,7 +696,7 @@ namespace dark
             this.MinimumSize = new System.Drawing.Size(1223, 640);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "darkstats";
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).EndInit();
@@ -710,16 +710,16 @@ namespace dark
             this.panelItemChoose.ResumeLayout(false);
             this.panelItemChoose.PerformLayout();
             this.sPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.sPanel2.ResumeLayout(false);
             this.sPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbMainHand)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOffHand)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
