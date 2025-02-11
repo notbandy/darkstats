@@ -11,12 +11,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using Transitions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
+using System.Security.Cryptography;
 
 namespace dark
 {
     
     public partial class Form1 : Form
     {
+        Character.Class Cluss { get; set; }
         public static Dictionary<string, string> raritycode = new Dictionary<string, string>()
         {
             {"Poor", "1001" },
@@ -43,7 +46,7 @@ namespace dark
         }
         public delegate void msg(string c, string t, msgbox.Icons i);
         public static msg msgdeleg;
-        Character Char = new Character(msgdeleg);
+        Character Char1 = new Character(msgdeleg);
         public Form1()
         {
             InitializeComponent();
@@ -84,7 +87,7 @@ namespace dark
         void logItem(string item, string rarity, string type, ref PictureBox p)
         {
             Item i = new Item(item, rarity, type) { };
-            Char.EditItem(type, i);
+            Char1.EditItem(type, i);
             p.Image = API.calliconapi("https://api.darkerdb.com/v1/icon?id=" + comboboxItems.Text + "_" + raritycode[comboboxRarity.Text]);
             message("item added", "test message" + Environment.NewLine + "item: " + i.stats.name + Environment.NewLine + "Rarity: " + i.stats.rarity + Environment.NewLine + "Max armor rating: " + i.stats.primary_max_armor_rating, msgbox.Icons.Info);        
         }
@@ -216,10 +219,54 @@ namespace dark
         {
            
         }
-
+        
         private void sButton1_Click_2(object sender, EventArgs e)
         {
-            message(Char.Items["OffHand"].stats.primary_max_weapon_damage.ToString(), "asd", msgbox.Icons.Info);
+            //message(Char.Items["OffHand"].stats.primary_max_weapon_damage.ToString(), "asd", msgbox.Icons.Info);
+            switch (Cluss)
+            {
+                case Character.Class.fighter:
+                    Char1.Stats["strength"] = 15;
+
+                    break;
+            }
+        }
+        
+        private void CBclass_select_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (CBclass_select.SelectedText)
+            {
+                case "Fighter":
+                    Cluss = Character.Class.fighter;
+                    break;
+                case "Barbarian":
+                    Cluss = Character.Class.barbarian;
+                    break;
+                case "Rouge":
+                    Cluss = Character.Class.rouge;
+                    break;
+                case "Ranger":
+                    Cluss = Character.Class.ranger;
+                    break;
+                case "Wizard":
+                    Cluss = Character.Class.wizard;
+                    break;
+                case "Cleric":
+                    Cluss = Character.Class.cleric;
+                    break;
+                case "Bard":
+                    Cluss = Character.Class.bard;
+                    break;
+                case "Warlock":
+                    Cluss = Character.Class.warlock;
+                    break;
+                case "Druid":
+                    Cluss = Character.Class.druid;
+                    break;
+                case "Sorcerer":
+                    Cluss = Character.Class.sorcerer;
+                    break;
+            }
         }
     }
 }

@@ -70,6 +70,7 @@ namespace dark
             this.listView1 = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
             this.sEllipse3 = new Sipaa.Framework.SEllipse();
+            this.CBclass_select = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -682,11 +683,37 @@ namespace dark
             this.sEllipse3.CornerRadius = 6;
             this.sEllipse3.TargetControl = this.panel1;
             // 
+            // CBclass_select
+            // 
+            this.CBclass_select.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(160)))), ((int)(((byte)(42)))));
+            this.CBclass_select.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.CBclass_select.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBclass_select.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CBclass_select.ForeColor = System.Drawing.Color.Black;
+            this.CBclass_select.FormattingEnabled = true;
+            this.CBclass_select.Items.AddRange(new object[] {
+            "Fighter",
+            "Barbarian",
+            "Rouge",
+            "Ranger",
+            "Wizard",
+            "Cleric",
+            "Bard",
+            "Warlock",
+            "Druid",
+            "Sorcerer"});
+            this.CBclass_select.Location = new System.Drawing.Point(1046, 12);
+            this.CBclass_select.Name = "CBclass_select";
+            this.CBclass_select.Size = new System.Drawing.Size(149, 28);
+            this.CBclass_select.TabIndex = 16;
+            this.CBclass_select.SelectedIndexChanged += new System.EventHandler(this.CBclass_select_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(1207, 601);
+            this.Controls.Add(this.CBclass_select);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.sPanel2);
             this.Controls.Add(this.sPanel1);
@@ -768,6 +795,7 @@ namespace dark
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListView listView1;
         private Sipaa.Framework.SButton sButton1;
+        private System.Windows.Forms.ComboBox CBclass_select;
     }
 }
 
