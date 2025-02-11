@@ -226,9 +226,38 @@ namespace dark
             switch (Cluss)
             {
                 case Character.Class.fighter:
-                    Char1.Stats["strength"] = 15;
-
+                    Char1.Stats["strength"] = calc_str(15);
+                    Char1.Stats["vigor"] = calc_vig(15);
+                    Char1.Stats["agility"]= 15;
+                    Char1.Stats["dexterity"] = 0;
+                    Char1.Stats["will"] = 0;
+                    Char1.Stats["knowledge"] = 0;
+                    Char1.Stats["resourcefulness"] = 0;
+                    Char1.Stats["health"] = 0;
+                    Char1.Stats["memcap"] = 0;
+                    Char1.Stats["movespeed"] = 0;
+                    Char1.Stats["actionspeed"] = 0;
+                    Char1.Stats["armorpen"] = 0;
+                    Char1.Stats["magicpen"] = 0;
+                    Char1.Stats["headshotred"] = 0;
+                    Char1.Stats["armorrating"] = 0;
+                    Char1.Stats["pdr"] = 0;
+                    Char1.Stats["magicres"] = 0;
+                    Char1.Stats["mdr"] = 0;
+                    Char1.Stats["physpower"] = 0;
+                    Char1.Stats["magicpower"] = 0;
+                    Char1.Stats["Ppowerbonus"] = 0;
+                    Char1.Stats["Mpowerbonus"] = 0;
+                    Char1.Stats["TruePhysDamage"] = 0;
+                    Char1.Stats["maxhbonus"] = 0;
+                    Char1.Stats["Physdamage"] = 0;
+                    Char1.Stats["Physdamagebonus"] = 0;
+                    Char1.Stats["magicdamage"] = 0;
+                    Char1.Stats["magicdamagebonus"] = 0;
+                    Char1.Stats["addphysdamage"] = 0;
+                    Char1.Stats["addmagicdamage"] = 0;
                     break;
+
             }
         }
         
@@ -267,6 +296,16 @@ namespace dark
                     Cluss = Character.Class.sorcerer;
                     break;
             }
+        }
+        public float calc_str(float BaseStat)
+        {
+            float n = BaseStat + Char1.Items["Helmet"].stats.primary_max_strength + Char1.Items["Chest"].stats.primary_max_strength + Char1.Items["Leg"].stats.primary_max_strength + Char1.Items["Hand"].stats.primary_max_strength + Char1.Items["Foot"].stats.primary_max_strength + Char1.Items["Back"].stats.primary_max_strength + Char1.Items["Necklace"].stats.primary_max_strength + Char1.Items["Ring"].stats.primary_max_strength + Char1.Items["Ring2"].stats.primary_max_strength + Char1.Items["MainHand"].stats.primary_max_strength + Char1.Items["OffHand"].stats.primary_max_strength;
+            return n;
+        }
+        public float calc_vig(float BaseStat)
+        {
+            float n = BaseStat + Char1.Items["Helmet"].stats.primary_max_vigor + Char1.Items["Chest"].stats.primary_max_vigor + Char1.Items["Leg"].stats.primary_max_vigor + Char1.Items["Hand"].stats.primary_max_vigor + Char1.Items["Foot"].stats.primary_max_vigor + Char1.Items["Back"].stats.primary_max_vigor + Char1.Items["Necklace"].stats.primary_max_vigor + Char1.Items["Ring"].stats.primary_max_vigor + Char1.Items["Ring2"].stats.primary_max_vigor + Char1.Items["MainHand"].stats.primary_max_vigor + Char1.Items["OffHand"].stats.primary_max_vigor;
+            return n;
         }
     }
 }
