@@ -70,10 +70,10 @@ namespace dark
             this.listView1 = new System.Windows.Forms.ListView();
             this.label7 = new System.Windows.Forms.Label();
             this.sEllipse3 = new Sipaa.Framework.SEllipse();
-<<<<<<< Updated upstream
-=======
+
+
             this.CBclassselect = new System.Windows.Forms.ComboBox();
->>>>>>> Stashed changes
+
             ((System.ComponentModel.ISupportInitialize)(this.pbHelmet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLeg)).BeginInit();
@@ -398,7 +398,7 @@ namespace dark
             this.tableLayoutPanel2.TabIndex = 12;
             // 
             // tableLayoutPanel5
-<<<<<<< Updated upstream
+
             // 
             this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -514,7 +514,6 @@ namespace dark
             // 
             // tableLayoutPanel1
             // 
-=======
             // 
             this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -630,7 +629,7 @@ namespace dark
             // 
             // tableLayoutPanel1
             // 
->>>>>>> Stashed changes
+
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -804,8 +803,6 @@ namespace dark
             this.sEllipse3.CornerRadius = 6;
             this.sEllipse3.TargetControl = this.panel1;
             // 
-<<<<<<< Updated upstream
-=======
             // CBclassselect
             // 
             this.CBclassselect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(160)))), ((int)(((byte)(42)))));
@@ -831,7 +828,6 @@ namespace dark
             this.CBclassselect.TabIndex = 16;
             this.CBclassselect.SelectedIndexChanged += new System.EventHandler(this.CBclassselect_SelectedIndexChanged);
             // 
->>>>>>> Stashed changes
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
