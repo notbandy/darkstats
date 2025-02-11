@@ -224,7 +224,7 @@ namespace dark
             {
                 case Character.Class.fighter:
                     Char1.Stats["strength"] = 15;
-                    Char1.Stats["vigor"] = 15;
+
                     break;
             }
         }
