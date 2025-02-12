@@ -227,7 +227,7 @@ namespace dark
             switch (targetclass)
             {
                 case Character.Class.fighter:
-                    calcAllStats(new float[] { calc.calc_str })
+                    calcAllStats(new float[] { calc.str(15), calc.vig(15) });
                     break;
 
             }
