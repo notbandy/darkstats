@@ -45,13 +45,14 @@ namespace database
             {"will", 0 },
             {"knowledge", 0 },
             {"resourcefulness", 0 },
+            {"base_health",0 },
             {"health", 0 },
             {"memcap",0 },
             {"movespeed", 0 },
             {"actionspeed", 0 },
             {"armorpen", 0 },
             {"headshotred", 0 },
-            {"armorrating",0 },
+            {"armor_rating",0 },
             {"pdr", 0 },
             {"mr", 0 },
             {"physpower",0 },
@@ -164,7 +165,7 @@ namespace database
         public string type { get; set; }
         public string armor_type { get; set; }
         public string slot_type { get; set; }            
-
+        public float primary_max_move_speed_bonus { get; set; }
         public float primary_max_armor_rating { get; set; }       
         public float primary_max_move_speed { get; set; }
         public float primary_max_armor_penetration { get; set; } 
