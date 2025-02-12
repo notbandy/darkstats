@@ -110,7 +110,7 @@ namespace dark
                 maxhp += it.Value.stats.primary_max_max_health;
             }
 
-            return basehp * (1 + maxhpbonus) + maxhp; ;
+            return basehp * (1 + maxhpbonus) + maxhp;
         }
         public static float memcap(float knlg)
         {
@@ -125,10 +125,39 @@ namespace dark
             }
             return memcap;
         }
-        public static float move_speed()
+        public static float move_speed(float agi)
         {
+            float basespeed = -10;
+            for (int i =1;i<=agi;i++)
+            {
+                if (i<=10)
+                {
+                    basespeed += (float)0.5;
+                }
+                else if (i<=15)
+                {
+                    basespeed += 1;
+                }
+                else if (i<=75)
+                {
+                    basespeed += (float)0.75;
+                }
+                else if (i<=100)
+                {
+                    basespeed += (float)0.5;
+                }
+            }
+            basespeed += 300;
 
-            return 0;
+            float gearms = 0;            
+            float msbonus = 0;
+            foreach (var it in c.Items)
+            {
+                gearms += it.Value.stats.primary_max_move_speed;
+                msbonus += it.Value.stats.primary_max_move_speed_bonus;
+            }
+
+            return (basespeed+gearms)*(1+msbonus);
         }
 
     }
