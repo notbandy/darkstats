@@ -22,7 +22,21 @@ namespace database
 
         public static Form1.msg msg;
 
-        public Dictionary<string, short> Stats = new Dictionary<string, short>()
+        public enum Class
+        {
+            fighter,
+            barbarian,
+            rouge,
+            ranger,
+            wizard,
+            cleric,
+            bard,
+            warlock,
+            sorcerer,
+            druid
+        }
+
+        public Dictionary<string, float> Stats = new Dictionary<string, float>()
         {
             {"strength", 0 },
             {"vigor", 0 },

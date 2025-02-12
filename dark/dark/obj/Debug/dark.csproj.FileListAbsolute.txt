@@ -45,3 +45,5 @@ E:\#csharp\darktracker\dark\dark\bin\Debug\Newtonsoft.Json.dll
 E:\#csharp\darktracker\dark\dark\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Msi\Source\Repos\darkstats\dark\dark\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Msi\Source\Repos\darkstats\dark\dark\bin\Debug\Newtonsoft.Json.xml
+S:\git\darkstats\dark\dark\obj\Debug\dark.fish.resources
+S:\git\darkstats\dark\dark\obj\Debug\dark.msgbox.resources

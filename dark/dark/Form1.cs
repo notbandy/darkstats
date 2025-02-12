@@ -19,7 +19,7 @@ namespace dark
     
     public partial class Form1 : Form
     {
-        Character.Class Cluss { get; set; }
+        Character.Class targetclass { get; set; }
         public static Dictionary<string, string> raritycode = new Dictionary<string, string>()
         {
             {"Poor", "1001" },
@@ -223,89 +223,84 @@ namespace dark
         private void sButton1_Click_2(object sender, EventArgs e)
         {
             //message(Char.Items["OffHand"].stats.primary_max_weapon_damage.ToString(), "asd", msgbox.Icons.Info);
-            switch (Cluss)
+            calc.c = Char1;
+            switch (targetclass)
             {
                 case Character.Class.fighter:
-                    Char1.Stats["strength"] = calc_str(15);
-                    Char1.Stats["vigor"] = calc_vig(15);
-                    Char1.Stats["agility"]= 15;
-                    Char1.Stats["dexterity"] = 0;
-                    Char1.Stats["will"] = 0;
-                    Char1.Stats["knowledge"] = 0;
-                    Char1.Stats["resourcefulness"] = 0;
-                    Char1.Stats["health"] = 0;
-                    Char1.Stats["memcap"] = 0;
-                    Char1.Stats["movespeed"] = 0;
-                    Char1.Stats["actionspeed"] = 0;
-                    Char1.Stats["armorpen"] = 0;
-                    Char1.Stats["magicpen"] = 0;
-                    Char1.Stats["headshotred"] = 0;
-                    Char1.Stats["armorrating"] = 0;
-                    Char1.Stats["pdr"] = 0;
-                    Char1.Stats["magicres"] = 0;
-                    Char1.Stats["mdr"] = 0;
-                    Char1.Stats["physpower"] = 0;
-                    Char1.Stats["magicpower"] = 0;
-                    Char1.Stats["Ppowerbonus"] = 0;
-                    Char1.Stats["Mpowerbonus"] = 0;
-                    Char1.Stats["TruePhysDamage"] = 0;
-                    Char1.Stats["maxhbonus"] = 0;
-                    Char1.Stats["Physdamage"] = 0;
-                    Char1.Stats["Physdamagebonus"] = 0;
-                    Char1.Stats["magicdamage"] = 0;
-                    Char1.Stats["magicdamagebonus"] = 0;
-                    Char1.Stats["addphysdamage"] = 0;
-                    Char1.Stats["addmagicdamage"] = 0;
+                    calcAllStats(new float[] { calc.calc_str })
                     break;
 
             }
         }
-        
+        public void calcAllStats(float[] stats)
+        {
+            Char1.Stats["strength"] = stats[0];
+            Char1.Stats["vigor"] = stats[1];
+            Char1.Stats["agility"] = stats[2];
+            Char1.Stats["dexterity"] = stats[3];
+            Char1.Stats["will"] = stats[4];
+            Char1.Stats["knowledge"] = stats[5];
+            Char1.Stats["resourcefulness"] = stats[6];
+            Char1.Stats["health"] = stats[7];
+            Char1.Stats["memcap"] = stats[8];
+            Char1.Stats["movespeed"] = stats[9];
+            Char1.Stats["actionspeed"] = stats[10];
+            Char1.Stats["armorpen"] = stats[11];
+            Char1.Stats["magicpen"] = stats[12];
+            Char1.Stats["headshotred"] = stats[13];
+            Char1.Stats["armorrating"] = stats[14];
+            Char1.Stats["pdr"] = stats[15];
+            Char1.Stats["magicres"] = stats[16];
+            Char1.Stats["mdr"] = stats[17];
+            Char1.Stats["physpower"] = stats[18];
+            Char1.Stats["magicpower"] = stats[19];
+            Char1.Stats["Ppowerbonus"] = stats[20];
+            Char1.Stats["Mpowerbonus"] = stats[21];
+            Char1.Stats["TruePhysDamage"] = stats[22];
+            Char1.Stats["maxhbonus"] = stats[23];
+            Char1.Stats["Physdamage"] = stats[24];
+            Char1.Stats["Physdamagebonus"] = stats[25];
+            Char1.Stats["magicdamage"] = stats[26];
+            Char1.Stats["magicdamagebonus"] = stats[27];
+            Char1.Stats["addphysdamage"] = stats[28];
+            Char1.Stats["addmagicdamage"] = stats[29];
+        }
         private void CBclass_select_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (CBclass_select.SelectedText)
             {
                 case "Fighter":
-                    Cluss = Character.Class.fighter;
+                    targetclass = Character.Class.fighter;
                     break;
                 case "Barbarian":
-                    Cluss = Character.Class.barbarian;
+                    targetclass = Character.Class.barbarian;
                     break;
                 case "Rouge":
-                    Cluss = Character.Class.rouge;
+                    targetclass = Character.Class.rouge;
                     break;
                 case "Ranger":
-                    Cluss = Character.Class.ranger;
+                    targetclass = Character.Class.ranger;
                     break;
                 case "Wizard":
-                    Cluss = Character.Class.wizard;
+                    targetclass = Character.Class.wizard;
                     break;
                 case "Cleric":
-                    Cluss = Character.Class.cleric;
+                    targetclass = Character.Class.cleric;
                     break;
                 case "Bard":
-                    Cluss = Character.Class.bard;
+                    targetclass = Character.Class.bard;
                     break;
                 case "Warlock":
-                    Cluss = Character.Class.warlock;
+                    targetclass = Character.Class.warlock;
                     break;
                 case "Druid":
-                    Cluss = Character.Class.druid;
+                    targetclass = Character.Class.druid;
                     break;
                 case "Sorcerer":
-                    Cluss = Character.Class.sorcerer;
+                    targetclass = Character.Class.sorcerer;
                     break;
             }
         }
-        public float calc_str(float BaseStat)
-        {
-            float n = BaseStat + Char1.Items["Helmet"].stats.primary_max_strength + Char1.Items["Chest"].stats.primary_max_strength + Char1.Items["Leg"].stats.primary_max_strength + Char1.Items["Hand"].stats.primary_max_strength + Char1.Items["Foot"].stats.primary_max_strength + Char1.Items["Back"].stats.primary_max_strength + Char1.Items["Necklace"].stats.primary_max_strength + Char1.Items["Ring"].stats.primary_max_strength + Char1.Items["Ring2"].stats.primary_max_strength + Char1.Items["MainHand"].stats.primary_max_strength + Char1.Items["OffHand"].stats.primary_max_strength;
-            return n;
-        }
-        public float calc_vig(float BaseStat)
-        {
-            float n = BaseStat + Char1.Items["Helmet"].stats.primary_max_vigor + Char1.Items["Chest"].stats.primary_max_vigor + Char1.Items["Leg"].stats.primary_max_vigor + Char1.Items["Hand"].stats.primary_max_vigor + Char1.Items["Foot"].stats.primary_max_vigor + Char1.Items["Back"].stats.primary_max_vigor + Char1.Items["Necklace"].stats.primary_max_vigor + Char1.Items["Ring"].stats.primary_max_vigor + Char1.Items["Ring2"].stats.primary_max_vigor + Char1.Items["MainHand"].stats.primary_max_vigor + Char1.Items["OffHand"].stats.primary_max_vigor;
-            return n;
-        }
+        
     }
 }
