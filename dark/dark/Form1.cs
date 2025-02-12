@@ -227,7 +227,22 @@ namespace dark
             switch (targetclass)
             {
                 case Character.Class.fighter:
-                    calcAllStats(new float[] { calc.str(15), calc.vig(15) });
+                    calcAllStats(new float[]
+                    { 
+                        calc.str(15), // 0
+                        calc.vig(15), // 1
+                        calc.agi(15), // 2
+                        calc.dex(15), // 3
+                        calc.will(15), // 4
+                        calc.knlg(15), // 5
+                        calc.resr(15), // 6
+                        calc.base_health(calc.str(15),calc.vig(15)), // 7
+                        calc.health(calc.base_health(calc.str(15),calc.vig(15))), // 8
+                        calc.memcap(calc.knlg(15)), // 9
+                        calc.move_speed(calc.agi(15)) // 10
+
+                    }
+                    );
                     break;
 
             }
@@ -241,29 +256,30 @@ namespace dark
             Char1.Stats["will"] = stats[4];
             Char1.Stats["knowledge"] = stats[5];
             Char1.Stats["resourcefulness"] = stats[6];
-            Char1.Stats["health"] = stats[7];
-            Char1.Stats["memcap"] = stats[8];
-            Char1.Stats["movespeed"] = stats[9];
-            Char1.Stats["actionspeed"] = stats[10];
-            Char1.Stats["armorpen"] = stats[11];
-            Char1.Stats["magicpen"] = stats[12];
-            Char1.Stats["headshotred"] = stats[13];
-            Char1.Stats["armorrating"] = stats[14];
-            Char1.Stats["pdr"] = stats[15];
-            Char1.Stats["magicres"] = stats[16];
-            Char1.Stats["mdr"] = stats[17];
-            Char1.Stats["physpower"] = stats[18];
-            Char1.Stats["magicpower"] = stats[19];
-            Char1.Stats["Ppowerbonus"] = stats[20];
-            Char1.Stats["Mpowerbonus"] = stats[21];
-            Char1.Stats["TruePhysDamage"] = stats[22];
-            Char1.Stats["maxhbonus"] = stats[23];
-            Char1.Stats["Physdamage"] = stats[24];
-            Char1.Stats["Physdamagebonus"] = stats[25];
-            Char1.Stats["magicdamage"] = stats[26];
-            Char1.Stats["magicdamagebonus"] = stats[27];
-            Char1.Stats["addphysdamage"] = stats[28];
-            Char1.Stats["addmagicdamage"] = stats[29];
+            Char1.Stats["base_health"] = stats[7];
+            Char1.Stats["health"] = stats[8];
+            Char1.Stats["memcap"] = stats[9];
+            Char1.Stats["movespeed"] = stats[10];
+            Char1.Stats["actionspeed"] = stats[11];
+            Char1.Stats["armorpen"] = stats[12];
+            Char1.Stats["magicpen"] = stats[13];
+            Char1.Stats["headshotred"] = stats[14];
+            Char1.Stats["armor_rating"] = stats[15];
+            Char1.Stats["pdr"] = stats[16];
+            Char1.Stats["magicres"] = stats[17];
+            Char1.Stats["mdr"] = stats[18];
+            Char1.Stats["physpower"] = stats[19];
+            Char1.Stats["magicpower"] = stats[20];
+            Char1.Stats["Ppowerbonus"] = stats[21];
+            Char1.Stats["Mpowerbonus"] = stats[22];
+            Char1.Stats["TruePhysDamage"] = stats[23];
+            Char1.Stats["maxhbonus"] = stats[24];
+            Char1.Stats["Physdamage"] = stats[25];
+            Char1.Stats["Physdamagebonus"] = stats[26];
+            Char1.Stats["magicdamage"] = stats[27];
+            Char1.Stats["magicdamagebonus"] = stats[28];
+            Char1.Stats["addphysdamage"] = stats[29];
+            Char1.Stats["addmagicdamage"] = stats[30];
         }
         private void CBclass_select_SelectedIndexChanged(object sender, EventArgs e)
         {
