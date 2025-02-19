@@ -120,10 +120,17 @@ namespace dark
                 if (i>=6&&i<=100)
                 {
                     memcap++;
-                }
-                
+                }                
             }
-            return memcap;
+            float memcapbonus = 0;
+            float additionalmemcap = 0;
+            foreach (var it in c.Items)
+            {
+                additionalmemcap += it.Value.stats.primary_max_additional_memory_capacity;
+                memcap += it.Value.stats.primary_max_memory_capacity_bonus;
+            }
+
+            return (memcap*(1+memcapbonus)) + additionalmemcap;
         }
         public static float move_speed(float agi)
         {
@@ -158,6 +165,44 @@ namespace dark
             }
 
             return (basespeed+gearms)*(1+msbonus);
+        }
+        public static float action_speed(float agi,float dex)
+        {
+            float ASRating = (agi * (float)0.25) + (dex * (float)0.75);
+            float AS = (float)-0.38;
+            for (int i = 1;i<=ASRating;i++)
+            {
+                if (i<=10)
+                {
+                    AS += (float)0.03;
+                }
+                else if (i<=13)
+                {
+                    AS += (float)0.02;
+                }
+                else if(i<=25)
+                {
+                    AS += (float)0.01;
+                }
+                else if(i<=41)
+                {
+                    AS += (float)0.015;
+                }
+                else if(i<=50)
+                {
+                    AS += (float)0.01;
+                }
+                else if(i<=100)
+                {
+                    AS += (float)0.005;
+                }
+            }
+            float bonusAS=0;
+            foreach(var it in c.Items)
+            {
+                bonusAS = it.Value.stats.primary_max_action_speed;
+            }
+            return AS+bonusAS;
         }
 
     }
