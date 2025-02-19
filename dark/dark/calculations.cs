@@ -124,8 +124,9 @@ namespace dark
             }
             float memcapbonus = 0;
             float additionalmemcap = 0;
-            foreach (var it in c.Items)
+            foreach (var it in c.Items) 
             {
+                // TITANUS DOUG IS EXTREMELY POWERFULL
                 additionalmemcap += it.Value.stats.primary_max_additional_memory_capacity;
                 memcap += it.Value.stats.primary_max_memory_capacity_bonus;
             }
