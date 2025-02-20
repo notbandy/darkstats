@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|c:\\users\\msi\\source\\repos\\darkstats\\dark\\dark\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|solutionrelative:dark\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|c:\\users\\msi\\source\\repos\\darkstats\\dark\\dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|solutionrelative:dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|solutionrelative:dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|solutionrelative:dark\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EBA2CB3C-A052-4785-9F32-EBE0FA50C27C}|dark\\dark.csproj|solutionrelative:dark\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,7 +44,7 @@
               "RelativeDocumentMoniker": "dark\\calculations.cs",
               "ToolTip": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\calculations.cs",
               "RelativeToolTip": "dark\\calculations.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAIwH8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAowOMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T18:30:52.431Z",
               "EditorCaption": ""
@@ -57,27 +57,27 @@
               "RelativeDocumentMoniker": "dark\\Form1.cs",
               "ToolTip": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\Form1.cs",
               "RelativeToolTip": "dark\\Form1.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAAgwM8AAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAgwPQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T17:38:50.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "database.cs",
               "DocumentMoniker": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\database.cs",
               "RelativeDocumentMoniker": "dark\\database.cs",
               "ToolTip": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\database.cs",
               "RelativeToolTip": "dark\\database.cs",
-              "ViewState": "AgIAALMAAAAAAAAAAAAewNwAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAALMAAAAAAAAAAIA0wNwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-29T16:08:22.453Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Msi\\source\\repos\\darkstats\\dark\\dark\\Form1.cs",
               "RelativeDocumentMoniker": "dark\\Form1.cs",

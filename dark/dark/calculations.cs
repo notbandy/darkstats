@@ -126,7 +126,7 @@ namespace dark
             float additionalmemcap = 0;
             foreach (var it in c.Items) 
             {
-                // TITANUS DOUG IS EXTREMELY POWERFULL
+                // TITANUS DOUG IS EXTREMELY POWERFUL
                 additionalmemcap += it.Value.stats.primary_max_additional_memory_capacity;
                 memcap += it.Value.stats.primary_max_memory_capacity_bonus;
             }
@@ -201,9 +201,27 @@ namespace dark
             float bonusAS=0;
             foreach(var it in c.Items)
             {
-                bonusAS = it.Value.stats.primary_max_action_speed;
+                bonusAS += it.Value.stats.primary_max_action_speed;
             }
             return AS+bonusAS;
+        }
+        public static float armorpen()
+        {
+            float armorpen = 0;
+            foreach(var it in c.Items)
+            {
+             armorpen += it.Value.stats.primary_max_armor_penetration;   
+            }
+            return armorpen;
+        }
+        public static float magicpen()
+        {
+            float magicpen = 0;
+            foreach(var it in c.Items)
+            {
+                magicpen += it.Value.stats.primary_max_magic_penetration;
+            }
+            return magicpen;
         }
 
     }

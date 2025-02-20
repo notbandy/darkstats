@@ -239,7 +239,9 @@ namespace dark
                         calc.base_health(calc.str(15),calc.vig(15)), // 7
                         calc.health(calc.base_health(calc.str(15),calc.vig(15))), // 8
                         calc.memcap(calc.knlg(15)), // 9
-                        calc.move_speed(calc.agi(15)) // 10
+                        calc.move_speed(calc.agi(15)), // 10
+                        calc.action_speed(calc.agi(15),calc.dex(15)), // 11
+                        calc.armorpen() // 12
 
                     }
                     );
