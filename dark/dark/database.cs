@@ -126,7 +126,7 @@ namespace database
 
         public static ServerPopulation pullPopulation()
         {
-            var parsed = JObject.Parse(API.calljsonapi("https://api.darkerdb.com/v1/server-population"))["body"].ToString();
+            var parsed = JObject.Parse(API.calljsonapi("https://api.darkerdb.com/v1/population"))["body"].ToString();
             return JsonConvert.DeserializeObject<ServerPopulation>(parsed);
         }
         //properties
